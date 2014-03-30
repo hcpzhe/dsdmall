@@ -381,7 +381,9 @@ function get_promote_goods($cats = '')
         {
             $goods[$idx]['promote_price'] = '';
         }
-
+		
+        $goods[$idx]['end_date'] = $row['promote_end_date'];
+        $goods[$idx]['end_date_str'] = date('M j,Y H:i:s',$row['promote_end_date']);
         $goods[$idx]['id']           = $row['goods_id'];
         $goods[$idx]['name']         = $row['goods_name'];
         $goods[$idx]['brief']        = $row['goods_brief'];
