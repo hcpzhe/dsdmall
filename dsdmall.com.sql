@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-03-29 17:57:32
+Date: 2014-03-30 17:46:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,11 +58,12 @@ CREATE TABLE `dsd_ad` (
   PRIMARY KEY (`ad_id`),
   KEY `position_id` (`position_id`),
   KEY `enabled` (`enabled`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_ad
 -- ----------------------------
+INSERT INTO `dsd_ad` VALUES ('1', '1', '0', '首页资讯下方广告', '', '1396118181772272571.jpg', '1396080000', '1680076800', '', '', '', '3', '1');
 
 -- ----------------------------
 -- Table structure for `dsd_admin_action`
@@ -203,7 +204,7 @@ CREATE TABLE `dsd_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_admin_log
@@ -245,6 +246,20 @@ INSERT INTO `dsd_admin_log` VALUES ('34', '1396055906', '1', '添加商品分类
 INSERT INTO `dsd_admin_log` VALUES ('35', '1396055926', '1', '添加商品分类: 运动鞋', '127.0.0.1');
 INSERT INTO `dsd_admin_log` VALUES ('36', '1396055938', '1', '添加商品分类: 运动服包', '127.0.0.1');
 INSERT INTO `dsd_admin_log` VALUES ('37', '1396055948', '1', '添加商品分类: 户外鞋服', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('38', '1396118121', '1', '添加广告位置: 首页资讯下方广告位', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('39', '1396118181', '1', '添加广告: 首页资讯下方广告', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('40', '1396118329', '1', '编辑广告: 首页资讯下方广告', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('41', '1396118375', '1', '添加文章分类: 商城资讯', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('42', '1396118412', '1', '添加文章: 大时代商城上线了', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('43', '1396118869', '1', '添加文章: 大时代商城运费通知', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('44', '1396118883', '1', '添加文章: 大时代商城感恩回馈', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('45', '1396118902', '1', '添加文章: 关于生鲜蔬菜类订单的通知', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('46', '1396118926', '1', '添加文章: 大时代商城2014运营通告', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('47', '1396118972', '1', '添加文章: 大时代商城向您承诺', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('48', '1396120807', '1', '编辑商店设置: ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('49', '1396120978', '1', '编辑商店设置: ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('50', '1396121017', '1', '添加商品: 青岛崂山啤酒 330ml', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('51', '1396121053', '1', '编辑商品: 青岛崂山啤酒 330ml', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `dsd_admin_message`
@@ -297,7 +312,7 @@ CREATE TABLE `dsd_admin_user` (
 -- ----------------------------
 -- Records of dsd_admin_user
 -- ----------------------------
-INSERT INTO `dsd_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1396047317', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `dsd_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1396129834', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for `dsd_adsense`
@@ -313,6 +328,7 @@ CREATE TABLE `dsd_adsense` (
 -- ----------------------------
 -- Records of dsd_adsense
 -- ----------------------------
+INSERT INTO `dsd_adsense` VALUES ('1', '本站', '3');
 
 -- ----------------------------
 -- Table structure for `dsd_ad_custom`
@@ -345,11 +361,12 @@ CREATE TABLE `dsd_ad_position` (
   `position_desc` varchar(255) NOT NULL DEFAULT '',
   `position_style` text NOT NULL,
   PRIMARY KEY (`position_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_ad_position
 -- ----------------------------
+INSERT INTO `dsd_ad_position` VALUES ('1', '首页资讯下方广告位', '245', '96', '', '<div>{$ads[0]}</div>');
 
 -- ----------------------------
 -- Table structure for `dsd_affiliate_log`
@@ -422,7 +439,7 @@ CREATE TABLE `dsd_article` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`article_id`),
   KEY `cat_id` (`cat_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_article
@@ -433,6 +450,12 @@ INSERT INTO `dsd_article` VALUES ('3', '2', '咨询热点', '', '', '', '', '0',
 INSERT INTO `dsd_article` VALUES ('4', '2', '联系我们', '', '', '', '', '0', '1', '1396055852', '', '0', '', null);
 INSERT INTO `dsd_article` VALUES ('5', '2', '公司简介', '', '', '', '', '0', '1', '1396055852', '', '0', '', null);
 INSERT INTO `dsd_article` VALUES ('6', '-1', '用户协议', '', '', '', '', '0', '1', '1396055852', '', '0', '', null);
+INSERT INTO `dsd_article` VALUES ('7', '4', '大时代商城上线了', '<p>&nbsp;大时代商城上线了大时代商城上线了大时代商城上线了大时代商城上线了大时代商城上线了</p>', '', '', '', '0', '1', '1396118412', '', '0', 'http://', '');
+INSERT INTO `dsd_article` VALUES ('8', '4', '大时代商城运费通知', '<p>&nbsp;大时代商城运费通知大时代商城运费通知大时代商城运费通知大时代商城运费通知</p>', '', '', '', '0', '1', '1396118869', '', '0', 'http://', '');
+INSERT INTO `dsd_article` VALUES ('9', '4', '大时代商城感恩回馈', '<p>&nbsp;大时代商城感恩回馈大时代商城感恩回馈大时代商城感恩回馈大时代商城感恩回馈大时代商城感恩回馈</p>', '', '', '', '0', '1', '1396118883', '', '0', 'http://', '');
+INSERT INTO `dsd_article` VALUES ('10', '4', '关于生鲜蔬菜类订单的通知', '<p>&nbsp;关于生鲜蔬菜类订单的通知关于生鲜蔬菜类订单的通知关于生鲜蔬菜类订单的通知</p>', '', '', '', '0', '1', '1396118902', '', '0', 'http://', '');
+INSERT INTO `dsd_article` VALUES ('11', '4', '大时代商城2014运营通告', '<p>&nbsp;大时代商城2014运营通告大时代商城2014运营通告大时代商城2014运营通告大时代商城2014运营通告</p>', '', '', '', '0', '1', '1396118926', '', '0', 'http://', '');
+INSERT INTO `dsd_article` VALUES ('12', '4', '大时代商城向您承诺', '<p>&nbsp;大时代商城向您承诺大时代商城向您承诺大时代商城向您承诺大时代商城向您承诺</p>', '', '', '', '0', '1', '1396118972', '', '0', 'http://', '');
 
 -- ----------------------------
 -- Table structure for `dsd_article_cat`
@@ -451,7 +474,7 @@ CREATE TABLE `dsd_article_cat` (
   KEY `cat_type` (`cat_type`),
   KEY `sort_order` (`sort_order`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_article_cat
@@ -459,6 +482,7 @@ CREATE TABLE `dsd_article_cat` (
 INSERT INTO `dsd_article_cat` VALUES ('1', '系统分类', '2', '', '系统保留分类', '50', '0', '0');
 INSERT INTO `dsd_article_cat` VALUES ('2', '网店信息', '3', '', '网店信息分类', '50', '0', '1');
 INSERT INTO `dsd_article_cat` VALUES ('3', '网店帮助分类', '4', '', '网店帮助分类', '50', '0', '1');
+INSERT INTO `dsd_article_cat` VALUES ('4', '商城资讯', '1', '', '', '50', '0', '0');
 
 -- ----------------------------
 -- Table structure for `dsd_attribute`
@@ -650,11 +674,12 @@ CREATE TABLE `dsd_brand` (
   `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`brand_id`),
   KEY `is_show` (`is_show`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_brand
 -- ----------------------------
+INSERT INTO `dsd_brand` VALUES ('1', '青岛', '', '', '', '50', '1');
 
 -- ----------------------------
 -- Table structure for `dsd_card`
@@ -1119,11 +1144,12 @@ CREATE TABLE `dsd_goods` (
   KEY `promote_start_date` (`promote_start_date`),
   KEY `goods_number` (`goods_number`),
   KEY `sort_order` (`sort_order`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_goods
 -- ----------------------------
+INSERT INTO `dsd_goods` VALUES ('1', '9', 'dsd000000', '青岛崂山啤酒 330ml', '+', '0', '1', '', '0', '0.000', '3.00', '2.80', '2.50', '1396080000', '1397030400', '0', '', '', '<p>&nbsp;青岛崂山啤酒 330ml</p>', 'images/201403/thumb_img/1_thumb_G_1396121017928.jpg', 'images/201403/goods_img/1_G_1396121017397.jpg', 'images/201403/source_img/1_G_1396121017938.jpg', '1', '', '1', '1', '0', '0', '1396121017', '100', '0', '0', '0', '1', '1', '0', '1396130026', '0', '', '-1', '-1', '0', null);
 
 -- ----------------------------
 -- Table structure for `dsd_goods_activity`
@@ -1210,11 +1236,12 @@ CREATE TABLE `dsd_goods_gallery` (
   `img_original` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`img_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_goods_gallery
 -- ----------------------------
+INSERT INTO `dsd_goods_gallery` VALUES ('1', '1', 'images/201403/goods_img/1_P_1396121018063.jpg', '', 'images/201403/thumb_img/1_thumb_P_1396121018467.jpg', 'images/201403/source_img/1_P_1396121017725.jpg');
 
 -- ----------------------------
 -- Table structure for `dsd_goods_type`
@@ -5123,9 +5150,8 @@ CREATE TABLE `dsd_sessions` (
 -- ----------------------------
 -- Records of dsd_sessions
 -- ----------------------------
-INSERT INTO `dsd_sessions` VALUES ('730b33727083cf0d211c1ba19e7332c9', '1396085546', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
-INSERT INTO `dsd_sessions` VALUES ('ddd52932f2bfb0eb8c1d9d3405bc2340', '1396086989', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1396058189;s:12:\"suppliers_id\";s:1:\"0\";}');
-INSERT INTO `dsd_sessions` VALUES ('1c24717feffc7998e4a1039da3435d57', '1396084246', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
+INSERT INTO `dsd_sessions` VALUES ('cf5a7449cc8a052bea09426320bc428c', '1396172598', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
+INSERT INTO `dsd_sessions` VALUES ('d8b323bafdffe09211a703c366529b78', '1396172675', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1396143875;s:12:\"suppliers_id\";s:1:\"0\";}');
 
 -- ----------------------------
 -- Table structure for `dsd_sessions_data`
@@ -5241,7 +5267,7 @@ INSERT INTO `dsd_shop_config` VALUES ('201', '2', 'lang', 'manual', '', '', 'zh_
 INSERT INTO `dsd_shop_config` VALUES ('202', '2', 'icp_number', 'text', '', '', '', '1');
 INSERT INTO `dsd_shop_config` VALUES ('203', '2', 'icp_file', 'file', '', '../cert/', '', '1');
 INSERT INTO `dsd_shop_config` VALUES ('204', '2', 'watermark', 'file', '', '../images/', '', '1');
-INSERT INTO `dsd_shop_config` VALUES ('205', '2', 'watermark_place', 'select', '0,1,2,3,4,5', '', '1', '1');
+INSERT INTO `dsd_shop_config` VALUES ('205', '2', 'watermark_place', 'select', '0,1,2,3,4,5', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('206', '2', 'watermark_alpha', 'text', '', '', '65', '1');
 INSERT INTO `dsd_shop_config` VALUES ('207', '2', 'use_storage', 'select', '1,0', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('208', '2', 'market_price_rate', 'text', '', '', '1.2', '1');
@@ -5249,7 +5275,7 @@ INSERT INTO `dsd_shop_config` VALUES ('209', '2', 'rewrite', 'select', '0,1,2', 
 INSERT INTO `dsd_shop_config` VALUES ('210', '2', 'integral_name', 'text', '', '', '积分', '1');
 INSERT INTO `dsd_shop_config` VALUES ('211', '2', 'integral_scale', 'text', '', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('212', '2', 'integral_percent', 'text', '', '', '0', '1');
-INSERT INTO `dsd_shop_config` VALUES ('213', '2', 'sn_prefix', 'text', '', '', 'ble', '1');
+INSERT INTO `dsd_shop_config` VALUES ('213', '2', 'sn_prefix', 'text', '', '', 'dsd', '1');
 INSERT INTO `dsd_shop_config` VALUES ('214', '2', 'comment_check', 'select', '0,1', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('215', '2', 'no_picture', 'file', '', '../images/', '', '1');
 INSERT INTO `dsd_shop_config` VALUES ('218', '2', 'stats_code', 'textarea', '', '', '', '1');
@@ -5262,13 +5288,13 @@ INSERT INTO `dsd_shop_config` VALUES ('224', '2', 'upload_size_limit', 'options'
 INSERT INTO `dsd_shop_config` VALUES ('226', '2', 'cron_method', 'select', '0,1', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('227', '2', 'comment_factor', 'select', '0,1,2,3', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('228', '2', 'enable_order_check', 'select', '0,1', '', '1', '1');
-INSERT INTO `dsd_shop_config` VALUES ('229', '2', 'default_storage', 'text', '', '', '1', '1');
+INSERT INTO `dsd_shop_config` VALUES ('229', '2', 'default_storage', 'text', '', '', '1000', '1');
 INSERT INTO `dsd_shop_config` VALUES ('230', '2', 'bgcolor', 'text', '', '', '#FFFFFF', '1');
-INSERT INTO `dsd_shop_config` VALUES ('231', '2', 'visit_stats', 'select', 'on,off', '', 'on', '1');
+INSERT INTO `dsd_shop_config` VALUES ('231', '2', 'visit_stats', 'select', 'on,off', '', 'off', '1');
 INSERT INTO `dsd_shop_config` VALUES ('232', '2', 'send_mail_on', 'select', 'on,off', '', 'off', '1');
 INSERT INTO `dsd_shop_config` VALUES ('233', '2', 'auto_generate_gallery', 'select', '1,0', '', '1', '1');
 INSERT INTO `dsd_shop_config` VALUES ('234', '2', 'retain_original_img', 'select', '1,0', '', '1', '1');
-INSERT INTO `dsd_shop_config` VALUES ('235', '2', 'member_email_validate', 'select', '1,0', '', '1', '1');
+INSERT INTO `dsd_shop_config` VALUES ('235', '2', 'member_email_validate', 'select', '1,0', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('236', '2', 'message_board', 'select', '1,0', '', '1', '1');
 INSERT INTO `dsd_shop_config` VALUES ('239', '2', 'certificate_id', 'hidden', '', '', '', '1');
 INSERT INTO `dsd_shop_config` VALUES ('240', '2', 'token', 'hidden', '', '', '', '1');
@@ -5280,19 +5306,19 @@ INSERT INTO `dsd_shop_config` VALUES ('245', '2', 'ent_sign', 'hidden', '', '', 
 INSERT INTO `dsd_shop_config` VALUES ('246', '2', 'ent_email', 'hidden', '', '', '', '1');
 INSERT INTO `dsd_shop_config` VALUES ('301', '3', 'date_format', 'hidden', '', '', 'Y-m-d', '1');
 INSERT INTO `dsd_shop_config` VALUES ('302', '3', 'time_format', 'text', '', '', 'Y-m-d H:i:s', '1');
-INSERT INTO `dsd_shop_config` VALUES ('303', '3', 'currency_format', 'text', '', '', '￥%s元', '1');
-INSERT INTO `dsd_shop_config` VALUES ('304', '3', 'thumb_width', 'text', '', '', '228', '1');
-INSERT INTO `dsd_shop_config` VALUES ('305', '3', 'thumb_height', 'text', '', '', '342', '1');
-INSERT INTO `dsd_shop_config` VALUES ('306', '3', 'image_width', 'text', '', '', '500', '1');
-INSERT INTO `dsd_shop_config` VALUES ('307', '3', 'image_height', 'text', '', '', '750', '1');
+INSERT INTO `dsd_shop_config` VALUES ('303', '3', 'currency_format', 'text', '', '', '￥%s', '1');
+INSERT INTO `dsd_shop_config` VALUES ('304', '3', 'thumb_width', 'text', '', '', '200', '1');
+INSERT INTO `dsd_shop_config` VALUES ('305', '3', 'thumb_height', 'text', '', '', '200', '1');
+INSERT INTO `dsd_shop_config` VALUES ('306', '3', 'image_width', 'text', '', '', '600', '1');
+INSERT INTO `dsd_shop_config` VALUES ('307', '3', 'image_height', 'text', '', '', '600', '1');
 INSERT INTO `dsd_shop_config` VALUES ('312', '3', 'top_number', 'text', '', '', '10', '1');
 INSERT INTO `dsd_shop_config` VALUES ('313', '3', 'history_number', 'text', '', '', '5', '1');
 INSERT INTO `dsd_shop_config` VALUES ('314', '3', 'comments_number', 'text', '', '', '5', '1');
 INSERT INTO `dsd_shop_config` VALUES ('315', '3', 'bought_goods', 'text', '', '', '3', '1');
 INSERT INTO `dsd_shop_config` VALUES ('316', '3', 'article_number', 'text', '', '', '8', '1');
-INSERT INTO `dsd_shop_config` VALUES ('317', '3', 'goods_name_length', 'text', '', '', '8', '1');
-INSERT INTO `dsd_shop_config` VALUES ('318', '3', 'price_format', 'select', '0,1,2,3,4,5', '', '1', '1');
-INSERT INTO `dsd_shop_config` VALUES ('319', '3', 'page_size', 'text', '', '', '21', '1');
+INSERT INTO `dsd_shop_config` VALUES ('317', '3', 'goods_name_length', 'text', '', '', '13', '1');
+INSERT INTO `dsd_shop_config` VALUES ('318', '3', 'price_format', 'select', '0,1,2,3,4,5', '', '0', '1');
+INSERT INTO `dsd_shop_config` VALUES ('319', '3', 'page_size', 'text', '', '', '20', '1');
 INSERT INTO `dsd_shop_config` VALUES ('320', '3', 'sort_order_type', 'select', '0,1,2', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('321', '3', 'sort_order_method', 'select', '0,1', '', '0', '1');
 INSERT INTO `dsd_shop_config` VALUES ('322', '3', 'show_order_type', 'select', '0,1,2', '', '1', '1');
@@ -5424,6 +5450,8 @@ CREATE TABLE `dsd_stats` (
 INSERT INTO `dsd_stats` VALUES ('1396028127', '127.0.0.1', '3', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://hostshop.com', '/dsdmall.com/mgr/index.php?act=top', '/dsdmall.com/index.php');
 INSERT INTO `dsd_stats` VALUES ('1396046898', '127.0.0.1', '31', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://www.hostshop.com', '/', '/dsdmall.com/index.php');
 INSERT INTO `dsd_stats` VALUES ('1396055446', '127.0.0.1', '2', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/dsdmall.com/index.php');
+INSERT INTO `dsd_stats` VALUES ('1396112600', '127.0.0.1', '32', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/dsdmall.com/index.php');
+INSERT INTO `dsd_stats` VALUES ('1396116327', '127.0.0.1', '3', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/dsdmall.com/index.php');
 
 -- ----------------------------
 -- Table structure for `dsd_suppliers`
@@ -5503,13 +5531,16 @@ INSERT INTO `dsd_template` VALUES ('category', '右边区域', '/library/pages.l
 INSERT INTO `dsd_template` VALUES ('category', '左边区域', '/library/cart.lbi', '0', '0', '0', '0', 'default', '');
 INSERT INTO `dsd_template` VALUES ('category', '左边区域', '/library/price_grade.lbi', '3', '0', '0', '0', 'default', '');
 INSERT INTO `dsd_template` VALUES ('category', '左边区域', '/library/filter_attr.lbi', '2', '0', '0', '0', 'default', '');
-INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_best.lbi', '2', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_new.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_hot.lbi', '1', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '促销商品区域', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', 'banner右侧区域', '/library/ad_position.lbi', '1', '1', '1', '4', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', 'banner右侧区域', '/library/cat_articles.lbi', '0', '4', '6', '3', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '1', '1', '3', '1', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', '', '/library/brands.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/recommend_new.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', 'banner下方区域', '/library/recommend_hot.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/recommend_best.lbi', '0', '0', '3', '0', 'red_three', '');
 
 -- ----------------------------
 -- Table structure for `dsd_topic`
