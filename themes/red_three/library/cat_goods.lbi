@@ -1,4 +1,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad"></div>
+		</div>
+		<div class="rs_igl_r"></div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand"></div>
+	</div>
+</div>
+<div class="blank"></div>
+
 
 
 <div class="xm-box">
@@ -31,3 +51,11 @@
  
 </div>
 <div class="blank"></div>
+<script type="text/javascript">
+$(function(){
+	$(".rs_jq_gl").each(function(){
+		$(this).addClass("rs_jq_gl_"+cate_step);
+	});
+	cate_step++;
+});
+</script>

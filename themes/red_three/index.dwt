@@ -20,205 +20,226 @@
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
 <div class="block clearfix">
-<div class="AreaL">
-
-<!-- #BeginLibraryItem "/library/category_tree_index.lbi" -->
-
-
-  <div id="category_tree">
-  <div class="tit"><img src="../images/category_tit.gif"> </div>
-  <div class="clearfix" style=" border:1px solid #ccc; border-top:none">
-    <!--{foreach from=$categories item=cat}-->
-     <dl>
-     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
-	 
-     <dd>
-	 <!--{foreach from=$cat.cat_id item=child}-->
-     <a href="{$child.url}">{$child.name|escape:html}</a>
-      
-     <!--{/foreach}-->
-       </dd>
-       </dl>
-    <!--{/foreach}--> 
-  </div>
+	<div class="AreaL">
+	<!-- #BeginLibraryItem "/library/category_tree_index.lbi" -->
+	  <div id="category_tree">
+	  <div class="tit"><img src="../images/category_tit.gif"> </div>
+	  <div class="clearfix" style=" border:1px solid #ccc; border-top:none">
+	    <!--{foreach from=$categories item=cat}-->
+	     <dl>
+	     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+		 
+	     <dd>
+		 <!--{foreach from=$cat.cat_id item=child}-->
+	     <a href="{$child.url}">{$child.name|escape:html}</a>
+	      
+	     <!--{/foreach}-->
+	       </dd>
+	       </dl>
+	    <!--{/foreach}--> 
+	  </div>
+	</div>
+	<div class="blank"></div>
+	<!-- #EndLibraryItem -->
 </div>
-<div class="blank"></div>
 
- <!-- #EndLibraryItem -->
-<!-- TemplateBeginEditable name="左边区域" -->
-<!-- TemplateEndEditable -->
 
-    <!--AD end-->
-  </div>
 
-<div style="float:right; width:994px;"> 
+<div style="float:left; width:744px; margin: 5px 0 5px 5px;"> 
 <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
  
  
-<!-- TemplateBeginEditable name="促销商品区域" -->
-<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
-
-<!-- {if $promotion_goods} -->
-<div class="sale_box clearfix">
-<div class="tit"><span>特价商品</span></div>
-
- 
-      <div class="clearfix">
-         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-        
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" class="B_blue"/></a></li>
-			<li> <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
-           {$lang.promote_price}<font class="f1">{$goods.promote_price}</font></li>
-           </ul>
-
-         <!--{/foreach}-->
-       </div>
- </div>
- 
-<div class="blank"></div>
-<!-- {/if} -->
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
- 
-</div>
- 
-  
-    <div class="blank"></div> 
- 
-  
-  <div class="goodsBox_1">
-  <!-- TemplateBeginEditable name="首页右侧区域" -->
-<!-- TemplateEndEditable -->
-  
-  <!-- TemplateBeginEditable name="全宽行" -->
-<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
-
-<!-- {if $new_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div class="xm-box">
-<h4 class="title"><span>新品上架</span> <a class="more" href="../search.php?intro=new">更多</a></h4>
-<div class="blank"></div>
-<div id="show_new_area" class="clearfix">
-  <!-- {/if} -->
-  <!--{foreach from=$new_goods item=goods}-->
-  <div class="goodsItem">
-       
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           
-           
- 市场价：<font class="market">{$goods.market_price}</font> <br/>
-      
-           本店价：<font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>      
-		    
-        </div>
-  <!--{/foreach}-->
- 
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-
-</div>
-<div class="blank"></div>
-  <!-- {/if} -->
-<!-- {/if} -->
-
- <!-- #EndLibraryItem -->
+<!-- TemplateBeginEditable name="banner下方区域" -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
 
 <!-- {if $hot_goods} -->
 <!-- {if $cat_rec_sign neq 1} -->
-<div class="xm-box">
-<h4 class="title"><span>热卖商品</span> <a class="more" href="../search.php?intro=hot">更多</a></h4>
-<div class="blank"></div>
-<div id="show_hot_area" class="clearfix">
-  <!-- {/if} -->
-  <!--{foreach from=$hot_goods item=goods}-->
-  <div class="goodsItem">
-       
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           
-           
- 市场价：<font class="market">{$goods.market_price}</font> <br/>
-      
-           本店价：<font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>      
-		    
-        </div>
-  <!--{/foreach}-->
- 
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-
+<div class="rs_sale_box">
+	<div class="rs_s_tit"><a href="../search.php?intro=hot">热卖商品</a></div>
+	<ul class="rs_s_list">
+		<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
+			<!-- {if $smarty.foreach.hot_foreach.first} -->
+			<li class="rs_first">
+			<!--{else}-->
+			<li>
+			<!--{/if}-->
+				<div class="rs_s_l_img">
+					<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+				</div>
+				<div class="rs_s_l_word">
+					<div class="rs_slw_n"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></div>
+					<del>{$goods.market_price}</del>
+					<div class="rs_slw_p">
+						<!-- {if $goods.promote_price neq ""} -->
+						{$goods.promote_price}
+						<!-- {else}-->
+						{$goods.shop_price}
+						<!--{/if}-->
+					</div>
+					<div class="rs_slw_b"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">立即抢</a></div>
+				</div>
+			</li>
+		<!--{/foreach}-->
+	</ul>
 </div>
-<div class="blank"></div>
-  <!-- {/if} -->
 <!-- {/if} -->
-
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
-
-<!-- {if $best_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div class="xm-box">
-<h4 class="title"><span>精品推荐</span> <a class="more" href="../search.php?intro=best">更多</a></h4>
-<div class="blank"></div>
-<div id="show_best_area" class="clearfix">
-  <!-- {/if} -->
-  <!--{foreach from=$best_goods item=goods}-->
-  <div class="goodsItem">
-       
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           
-           
- 市场价：<font class="market">{$goods.market_price}</font> <br/>
-      
-           本店价：<font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>      
-		    
-        </div>
-  <!--{/foreach}-->
- 
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-
-</div>
-<div class="blank"></div>
-  <!-- {/if} -->
 <!-- {/if} -->
 
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-  </div> 
-  
+
+</div>
+<div class="rs_bn_rt">
+	<!-- TemplateBeginEditable name="banner右侧区域" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+	<div class="rs_bnr_box">
+		<div class="rs_bnr_boxtit">
+			<h2><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></h2>
+			<div class="fr"><a href="{$articles_cat.url}">更多资讯&nbsp;&gt;</a></div>
+		</div>
+		<div class="rs_bnr_boxdl">
+			<ul class="rs_bnr_newslist">
+				<!--{foreach from=$articles item=article_item}-->
+				<li><a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a></li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+	<div id="rs_jq_bnr" class="rs_bnr_box">
+		<div class="rs_bnr_boxtit">
+			<h2><a href="../search.php?intro=promotion" target="_blank">今日特价</a></h2>
+			<div class="fr"><a href="../search.php?intro=promotion" target="_blank">更多&nbsp;&gt;&gt;</a></div>
+		</div>
+		<div class="rs_bnr_g">
+			<div class="rs_bnr_gimg"><a href="{$promotion_goods[0][url]}"><img src="{$promotion_goods[0][thumb]}" border="0" alt="{$promotion_goods[0][name]|escape:html}" /></a></div>
+			<div class="rs_bnr_timg">今日<br />特价</div>
+			<div class="rs_bnr_gname">
+				<div class="rs_bnr_gname_p">
+					<span class="rs_p_l">{$promotion_goods[0][promote_price]}</span>
+					<span class="rs_p_r"><del>{$promotion_goods[0][market_price]}</del></span>
+				</div>
+				<div class="rs_bnr_gname_n"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$promotion_goods[0][name]|escape:html}</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="blank"></div>
+<script type="text/javascript">var cate_step = 1;</script>
+<div class="block clearfix">
+<!-- TemplateBeginEditable name="全宽行" -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
+<!-- {if $promotion_goods} -->
+<div class="rs_pbox">
+	<div class="rs_pbox_tit"><span>限时抢购</span></div>
+	<ul class="rs_pbox_ul">
+		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+		<li>
+			<div class="rs_gl_img">
+				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+			</div>
+			<div class="rs_pbox_n">
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+			</div>
+			<div class="rs_pbox_n">
+				<img src="images/rs_clock.jpg" />剩余<span class="rs_jq_timer">{$goods.end_date_str}</span>
+			</div>
+			<div class="rs_pbox_p">
+				<span class="rs_pp">{$goods.promote_price}</span>
+				<del>{$goods.market_price}</del>
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
+			</div>
+		</li>
+		<!--{/foreach}-->
+	</ul>
+</div>
+<div class="blank"></div>
+<!-- {/if} -->
+
+<script type="text/javascript">
+$(function(){
+	$(".rs_jq_timer").each(function(){
+		countDown($(this).html(), this);
+	});
+	
+});
+function countDown(time, elemId){
+	//if(typeof end_time == "string")
+	var end_time = new Date(time).getTime();//月份是实际月份-1
+	//current_time = new Date().getTime(),
+	sys_second = (end_time-new Date().getTime())/1000;
+	var timer = setInterval(
+		function(){
+			var elemText = "剩余";
+			if (sys_second > 0) {
+				sys_second -= 1;
+				var day = Math.floor((sys_second / 3600) / 24);
+				var hour = Math.floor((sys_second / 3600) % 24);
+				var minute = Math.floor((sys_second / 60) % 60);
+				var second = Math.floor(sys_second % 60);
+				if(day > 0){
+					elemText += "<b>" + day + "</b>天";
+				}
+				elemText += "<b>" + hour + "</b>时";
+				elemText += '<b>' + minute + "</b>分";
+				elemText += '<b>' + second + "</b>秒";
+				$(elemId).html(elemText);
+			} else { 
+				clearInterval(timer);
+				$(elemId).text("活动结束");
+			}
+		}, 1000);
+}
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+
+<div class="xm-box">
+<h4 class="title"><span>{$goods_cat.name|escape:html}</span> <a class="more" href="{$goods_cat.url}">更多</a></h4>
+<div class="blank"></div>
+<div id="show_hot_area" class="clearfix">
+
+ 
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+       
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           
+           
+ 市场价：<font class="market">{$goods.market_price}</font> <br/>
+      
+           本店价：<font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>      
+		    
+        </div>
+      <!--{/foreach}-->
     </div>
-  <!--right end-->
-  
-  
  
-
-
-    <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
  
+</div>
+<div class="blank"></div>
 
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>
 </html>

@@ -1,21 +1,62 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $promotion_goods} -->
-<div class="sale_box clearfix">
-<div class="tit"><span>特价商品</span></div>
-
- 
-      <div class="clearfix">
-         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-        
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" class="B_blue"/></a></li>
-			<li> <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
-           {$lang.promote_price}<font class="f1">{$goods.promote_price}</font></li>
-           </ul>
-
-         <!--{/foreach}-->
-       </div>
- </div>
- 
+<div class="rs_pbox">
+	<div class="rs_pbox_tit"><span>限时抢购</span></div>
+	<ul class="rs_pbox_ul">
+		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+		<li>
+			<div class="rs_gl_img">
+				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+			</div>
+			<div class="rs_pbox_n">
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+			</div>
+			<div class="rs_pbox_n">
+				<img src="images/rs_clock.jpg" />剩余<span class="rs_jq_timer">{$goods.end_date_str}</span>
+			</div>
+			<div class="rs_pbox_p">
+				<span class="rs_pp">{$goods.promote_price}</span>
+				<del>{$goods.market_price}</del>
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
+			</div>
+		</li>
+		<!--{/foreach}-->
+	</ul>
+</div>
 <div class="blank"></div>
 <!-- {/if} -->
+
+<script type="text/javascript">
+$(function(){
+	$(".rs_jq_timer").each(function(){
+		countDown($(this).html(), this);
+	});
+});
+function countDown(time, elemId){
+	//if(typeof end_time == "string")
+	var end_time = new Date(time).getTime();//月份是实际月份-1
+	//current_time = new Date().getTime(),
+	sys_second = (end_time-new Date().getTime())/1000;
+	var timer = setInterval(
+		function(){
+			var elemText = "剩余";
+			if (sys_second > 0) {
+				sys_second -= 1;
+				var day = Math.floor((sys_second / 3600) / 24);
+				var hour = Math.floor((sys_second / 3600) % 24);
+				var minute = Math.floor((sys_second / 60) % 60);
+				var second = Math.floor(sys_second % 60);
+				if(day > 0){
+					elemText += "<b>" + day + "</b>天";
+				}
+				elemText += "<b>" + hour + "</b>时";
+				elemText += '<b>' + minute + "</b>分";
+				elemText += '<b>' + second + "</b>秒";
+				$(elemId).html(elemText);
+			} else { 
+				clearInterval(timer);
+				$(elemId).text("活动结束");
+			}
+		}, 1000);
+}
+</script>
