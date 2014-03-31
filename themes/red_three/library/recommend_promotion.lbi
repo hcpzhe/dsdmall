@@ -4,6 +4,7 @@
 	<div class="rs_pbox_tit"><span>限时抢购</span></div>
 	<ul class="rs_pbox_ul">
 		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+		<!--{if !$smarty.foreach.promotion_foreach.first}-->
 		<li>
 			<div class="rs_gl_img">
 				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
@@ -20,43 +21,9 @@
 				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
 			</div>
 		</li>
+		<!--{/if}-->
 		<!--{/foreach}-->
 	</ul>
 </div>
 <div class="blank"></div>
 <!-- {/if} -->
-
-<script type="text/javascript">
-$(function(){
-	$(".rs_jq_timer").each(function(){
-		countDown($(this).html(), this);
-	});
-});
-function countDown(time, elemId){
-	//if(typeof end_time == "string")
-	var end_time = new Date(time).getTime();//月份是实际月份-1
-	//current_time = new Date().getTime(),
-	sys_second = (end_time-new Date().getTime())/1000;
-	var timer = setInterval(
-		function(){
-			var elemText = "剩余";
-			if (sys_second > 0) {
-				sys_second -= 1;
-				var day = Math.floor((sys_second / 3600) / 24);
-				var hour = Math.floor((sys_second / 3600) % 24);
-				var minute = Math.floor((sys_second / 60) % 60);
-				var second = Math.floor(sys_second % 60);
-				if(day > 0){
-					elemText += "<b>" + day + "</b>天";
-				}
-				elemText += "<b>" + hour + "</b>时";
-				elemText += '<b>' + minute + "</b>分";
-				elemText += '<b>' + second + "</b>秒";
-				$(elemId).html(elemText);
-			} else { 
-				clearInterval(timer);
-				$(elemId).text("活动结束");
-			}
-		}, 1000);
-}
-</script>

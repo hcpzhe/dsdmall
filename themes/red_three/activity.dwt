@@ -7,8 +7,8 @@
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>{$page_title}</title>
 <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
-<link rel="shortcut icon" href="../ecmoban_vjia/favicon.ico" />
-<link rel="icon" href="../ecmoban_vjia/animated_favicon.gif" type="image/gif" />
+<link rel="shortcut icon" href="../red_three/favicon.ico" />
+<link rel="icon" href="../red_three/animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
 {* 包含脚本文件 *}
 {insert_scripts files='common.js'}

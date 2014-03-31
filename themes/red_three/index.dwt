@@ -132,50 +132,19 @@
 </div>
 
 <div class="blank"></div>
-<script type="text/javascript">var cate_step = 1;</script>
-<div class="block clearfix">
-<!-- TemplateBeginEditable name="全宽行" -->
-<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
-
-<!-- {if $promotion_goods} -->
-<div class="rs_pbox">
-	<div class="rs_pbox_tit"><span>限时抢购</span></div>
-	<ul class="rs_pbox_ul">
-		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-		<li>
-			<div class="rs_gl_img">
-				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
-			</div>
-			<div class="rs_pbox_n">
-				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
-			</div>
-			<div class="rs_pbox_n">
-				<img src="images/rs_clock.jpg" />剩余<span class="rs_jq_timer">{$goods.end_date_str}</span>
-			</div>
-			<div class="rs_pbox_p">
-				<span class="rs_pp">{$goods.promote_price}</span>
-				<del>{$goods.market_price}</del>
-				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
-			</div>
-		</li>
-		<!--{/foreach}-->
-	</ul>
-</div>
-<div class="blank"></div>
-<!-- {/if} -->
-
 <script type="text/javascript">
+var cate_step = 1;
+
 $(function(){
 	$(".rs_jq_timer").each(function(){
 		countDown($(this).html(), this);
 	});
-	
 });
 function countDown(time, elemId){
 	//if(typeof end_time == "string")
 	var end_time = new Date(time).getTime();//月份是实际月份-1
 	//current_time = new Date().getTime(),
-	sys_second = (end_time-new Date().getTime())/1000;
+	var sys_second = (end_time-new Date().getTime())/1000;
 	var timer = setInterval(
 		function(){
 			var elemText = "剩余";
@@ -199,47 +168,393 @@ function countDown(time, elemId){
 		}, 1000);
 }
 </script>
+<div class="block clearfix">
+<!-- TemplateBeginEditable name="全宽行" -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
+<!-- {if $promotion_goods} -->
+<div class="rs_pbox">
+	<div class="rs_pbox_tit"><span>限时抢购</span></div>
+	<ul class="rs_pbox_ul">
+		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+		<!--{if !$smarty.foreach.promotion_foreach.first}-->
+		<li>
+			<div class="rs_gl_img">
+				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+			</div>
+			<div class="rs_pbox_n">
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+			</div>
+			<div class="rs_pbox_n">
+				<img src="images/rs_clock.jpg" />剩余<span class="rs_jq_timer">{$goods.end_date_str}</span>
+			</div>
+			<div class="rs_pbox_p">
+				<span class="rs_pp">{$goods.promote_price}</span>
+				<del>{$goods.market_price}</del>
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
+			</div>
+		</li>
+		<!--{/if}-->
+		<!--{/foreach}-->
+	</ul>
+</div>
+<div class="blank"></div>
+<!-- {/if} -->
+
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 
-
-<div class="xm-box">
-<h4 class="title"><span>{$goods_cat.name|escape:html}</span> <a class="more" href="{$goods_cat.url}">更多</a></h4>
-<div class="blank"></div>
-<div id="show_hot_area" class="clearfix">
-
- 
-      <!--{foreach from=$cat_goods item=goods}-->
-      <div class="goodsItem">
-       
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           
-           
- 市场价：<font class="market">{$goods.market_price}</font> <br/>
-      
-           本店价：<font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>      
-		    
-        </div>
-      <!--{/foreach}-->
-    </div>
- 
- 
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
 </div>
 <div class="blank"></div>
 
+<script type="text/javascript">
+
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="blank"></div>
+
+<script type="text/javascript">
+
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="blank"></div>
+
+<script type="text/javascript">
+
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="blank"></div>
+
+<script type="text/javascript">
+
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<div class="rs_igll_cate"></div>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="blank"></div>
+
+<script type="text/javascript">
+
+</script>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 
-<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>
 </html>

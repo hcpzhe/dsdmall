@@ -97,8 +97,8 @@
 <div class="ft_pic_link" id="footerbanner2LazyLoad"> <a href="#"><img src="images/foot_img1.jpg"></a>| <a href="#"><img src="images/foot_img2.jpg"></a>|<a href="#"><img src="images/foot_img3.jpg"></a>|<a><img src="images/foot_img4.jpg"></a>|<a href="#"><img src="images/foot_img5.jpg"></a>|<a href="#"><img src="images/foot_img6.jpg"></a>|<a href="#"><img src="images/foot_img7.jpg"></a>|<a href="h#"><img src="images/foot_img8.jpg"></a>|</div>
 
 <!-- 悬浮客服开始 -->
-
-<link href="themes/ecmoban_yhd/qq/images/qq.css" rel="stylesheet" type="text/css" />
+<!--
+<link href="themes/red_three/qq/images/qq.css" rel="stylesheet" type="text/css" />
 <div class="QQbox" id="divQQbox" style="width: 170px; ">
   <div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
     <div class="t"></div>
@@ -140,8 +140,9 @@
     </div>
     <div class="b"></div>
   </div>
-  <div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="themes/ecmoban_yhd/qq/images/qq_1.gif" class="press" alt="在线咨询"></div>
+  <div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="themes/red_three/qq/images/qq_1.gif" class="press" alt="在线咨询"></div>
 </div>
+-->
 <script type="text/javascript">
 //<![CDATA[
 var tips; var theTop = 120/*这是默认高度,越大越往下*/; var old = theTop;
