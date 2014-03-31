@@ -1679,6 +1679,55 @@ function assign_template($ctype = '', $catlist = array())
         $searchkeywords = array();
     }
     $smarty->assign('searchkeywords', $searchkeywords);
+    /***************************************************************************************/
+    $time = gmtime();
+    $sql = 'SELECT a.ad_id,p.position_name, a.position_id, a.media_type, a.ad_link, a.ad_code, a.ad_name, p.ad_width, ' .
+                    'p.ad_height, p.position_style, RAND() AS rnd ' .
+                'FROM ' . $GLOBALS['ecs']->table('ad_position') . ' AS p '.
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('ad') . ' AS a ON a.position_id = p.position_id ' .
+    			
+                "WHERE a.enabled = 1 AND a.start_time <= '" . $time . "' AND a.end_time >= '" . $time . "' ".
+    			"AND p.position_name in ('idx_step_left','idx_step_mid','idx_step_right') ".
+                'ORDER BY ad_id ';
+    //die($sql);
+    $rs_ads = array();
+    $res = $GLOBALS['db']->GetAll($sql);
+    foreach ($res as $row) {
+        $tmpstep = str_ireplace($row['position_name']."_",'',$row['ad_name']);
+        switch ($row['media_type'])
+        {
+            case 0: // 图片广告
+                $src = (strpos($row['ad_code'], 'http://') === false && strpos($row['ad_code'], 'https://') === false) ?
+                        DATA_DIR . "/afficheimg/$row[ad_code]" : $row['ad_code'];
+                $rs_ads[$row['position_name']][$tmpstep][] = "<a href='affiche.php?ad_id=$row[ad_id]&amp;uri=" .urlencode($row["ad_link"]). "'
+                target='_blank'><img src='$src' width='" .$row['ad_width']. "' height='$row[ad_height]'
+                border='0' /></a>";
+                break;
+            case 1: // Flash
+                $src = (strpos($row['ad_code'], 'http://') === false && strpos($row['ad_code'], 'https://') === false) ?
+                        DATA_DIR . "/afficheimg/$row[ad_code]" : $row['ad_code'];
+                $rs_ads[$row['position_name']][$tmpstep][] = "<object classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" " .
+                         "codebase=\"http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0\"  " .
+                           "width='$row[ad_width]' height='$row[ad_height]'>
+                           <param name='movie' value='$src'>
+                           <param name='quality' value='high'>
+                           <embed src='$src' quality='high'
+                           pluginspage='http://www.macromedia.com/go/getflashplayer'
+                           type='application/x-shockwave-flash' width='$row[ad_width]'
+                           height='$row[ad_height]'></embed>
+                         </object>";
+                break;
+            case 2: // CODE
+                $rs_ads[$row['position_name']][$tmpstep][] = $row['ad_code'];
+                break;
+            case 3: // TEXT
+                $rs_ads[$row['position_name']][$tmpstep][] = "<a href='affiche.php?ad_id=$row[ad_id]&amp;uri=" .urlencode($row["ad_link"]). "'
+                target='_blank'>" .htmlspecialchars($row['ad_code']). '</a>';
+                break;
+        }
+    }
+    $GLOBALS['smarty']->assign('rs_idx_ads', $rs_ads);
+    /***************************************************************************************/
 }
 
 /**
