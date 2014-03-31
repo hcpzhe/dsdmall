@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-03-30 17:46:31
+Date: 2014-03-31 13:39:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,12 +58,27 @@ CREATE TABLE `dsd_ad` (
   PRIMARY KEY (`ad_id`),
   KEY `position_id` (`position_id`),
   KEY `enabled` (`enabled`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_ad
 -- ----------------------------
 INSERT INTO `dsd_ad` VALUES ('1', '1', '0', '首页资讯下方广告', '', '1396118181772272571.jpg', '1396080000', '1680076800', '', '', '', '3', '1');
+INSERT INTO `dsd_ad` VALUES ('2', '3', '0', 'idx_step_right_1', '', '1396213608506574863.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('3', '4', '0', 'idx_step_left_1', '', '1396206671138655665.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('4', '2', '0', 'idx_step_mid_1', '', '1396208949053264770.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('5', '4', '0', 'idx_step_left_2', '', '1396213199067276531.jpg', '1396166400', '1524988800', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('6', '3', '0', 'idx_step_right_2', '', '1396213283019312811.jpg', '1396166400', '1619683200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('7', '4', '0', 'idx_step_left_3', '', '1396213320060032237.jpg', '1396166400', '1619683200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('8', '4', '0', 'idx_step_left_4', '', '1396213379569025558.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('9', '4', '0', 'idx_step_left_5', '', '1396213410705039217.jpg', '1396166400', '1682755200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('10', '3', '0', 'idx_step_right_5', '', '1396213484112226898.jpg', '1396166400', '1619683200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('11', '3', '0', 'idx_step_right_4', '', '1396213547090493432.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('12', '3', '0', 'idx_step_right_3', '', '1396213582466659442.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('13', '2', '0', 'idx_step_mid_2', '', '1396213675731623875.jpg', '1396166400', '1619683200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('14', '2', '0', 'idx_step_mid_3', '', '1396213710805815596.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('15', '2', '0', 'idx_step_mid_4', '', '1396213743006467956.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `dsd_ad` VALUES ('16', '2', '0', 'idx_step_mid_5', '', '1396213781256049417.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for `dsd_admin_action`
@@ -204,7 +219,7 @@ CREATE TABLE `dsd_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=229 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_admin_log
@@ -260,6 +275,183 @@ INSERT INTO `dsd_admin_log` VALUES ('48', '1396120807', '1', '编辑商店设置
 INSERT INTO `dsd_admin_log` VALUES ('49', '1396120978', '1', '编辑商店设置: ', '127.0.0.1');
 INSERT INTO `dsd_admin_log` VALUES ('50', '1396121017', '1', '添加商品: 青岛崂山啤酒 330ml', '127.0.0.1');
 INSERT INTO `dsd_admin_log` VALUES ('51', '1396121053', '1', '编辑商品: 青岛崂山啤酒 330ml', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('52', '1396202265', '1', '添加广告位置: idx_step_mid', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('53', '1396203465', '1', '添加广告位置: idx_step_right', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('54', '1396203506', '1', '添加广告: idx_step_right_1', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('55', '1396204122', '1', '添加商品: 400g圣元进口优博较大婴儿奶粉盒装2段', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('56', '1396204245', '1', '添加商品: 900g圣元优聪普1段奶粉', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('57', '1396204288', '1', '添加商品: 900g圣元进口优博听装1段', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('58', '1396204317', '1', '添加商品: 400g美赞臣安婴儿A+无乳糖奶粉', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('59', '1396204438', '1', '添加商品: 900g惠氏爱儿乐妈妈奶粉', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('60', '1396204465', '1', '添加商品: 900g美赞臣安婴妈妈A+', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('61', '1396204527', '1', '添加商品: 400g雅士利能慧孕妇奶粉', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('62', '1396204618', '1', '添加商品: 39g合生元儿童益生菌冲剂', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('63', '1396204648', '1', '添加商品: 虾片/虾条', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('64', '1396204672', '1', '添加商品: 90g合生元儿童益生菌冲剂', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('65', '1396204747', '1', '添加商品: 120g亨氏清儿润香橙奶伴侣', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('66', '1396204843', '1', '添加商品: 64g亨氏磨牙棒 [香橙味]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('67', '1396204854', '1', '编辑商品: 虾片/虾条', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('68', '1396204872', '1', '添加商品: 64g亨氏磨牙棒 [牛奶味]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('69', '1396204951', '1', '添加商品: 上好佳虾片 [龙虾味 40g]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('70', '1396204963', '1', '添加商品: 225g亨氏淮山薏米米粉(1段)', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('71', '1396204982', '1', '添加商品: 225g贝因美DHA蔬菜营养米粉', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('72', '1396204983', '1', '编辑商品: 上好佳虾片 [龙虾味 40g]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('73', '1396205038', '1', '编辑商品: 上好佳虾片 [龙虾味 40g]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('74', '1396205074', '1', '添加商品: 208g贝因美黑芝麻营养面条', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('75', '1396205102', '1', '添加商品: 280g百乐麦阶段面(1)', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('76', '1396205119', '1', '添加商品: 上好佳虾条 [40g] ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('77', '1396205163', '1', '添加商品: 120g亨氏猕猴桃豌豆菠菜泥', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('78', '1396205180', '1', '添加商品: 亨氏乐维滋蔬乐2+2苹果草莓番茄胡萝卜泥 120g', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('79', '1396205195', '1', '添加商品: 40g上好佳洋葱圈', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('80', '1396205200', '1', '添加商品: 120g亨氏苹果玉米南瓜泥', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('81', '1396205265', '1', '添加商品: 115g贝因美宝宝原味肉酥', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('82', '1396205298', '1', '添加商品: 115g贝因美胡萝卜营养肉酥', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('83', '1396205377', '1', '添加商品: 40g好丽友香焗原味', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('84', '1396205438', '1', '添加商品: 40g好丽友烤鸡比莎薯片', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('85', '1396205480', '1', '添加商品: 40g好丽友番茄酱味薯条', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('86', '1396205563', '1', '添加商品: 希乐清阳水瓶xl-3504 [500ml]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('87', '1396205580', '1', '编辑商品: 希乐清阳水瓶xl-3504 [500ml]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('88', '1396205631', '1', '编辑商品: 希乐清阳水瓶xl-3504 [500ml]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('89', '1396205655', '1', '添加商品: 高露洁旅行套装/折叠牙刷加50克高露洁冰爽防蛀牙膏 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('90', '1396205672', '1', '添加商品: 乐扣乐扣500ml炫彩运动水杯HPP721T(蓝色) [中号 蓝', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('91', '1396205674', '1', '编辑商品: 高露洁旅行套装/折叠牙刷加50克高露洁冰爽防蛀牙膏 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('92', '1396205688', '1', '添加商品: 乐扣乐扣炫彩运动茶杯（黄）HPP722TO', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('93', '1396205699', '1', '编辑商品: 乐扣乐扣500ml炫彩运动水杯HPP721T(蓝色) [中号 蓝', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('94', '1396205748', '1', '添加商品: 佳洁士珍珠盐白牙膏(柠檬清新)140g ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('95', '1396205765', '1', '编辑商品: 佳洁士珍珠盐白牙膏(柠檬清新)140g ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('96', '1396205777', '1', '添加商品: 雅诚德情侣对杯', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('97', '1396205793', '1', '编辑商品: 佳洁士珍珠盐白牙膏(柠檬清新)140g ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('98', '1396205803', '1', '添加商品: 雅诚德珍妮杯', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('99', '1396205818', '1', '编辑商品: 佳洁士珍珠盐白牙膏(柠檬清新)140g ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('100', '1396205822', '1', '添加商品: 雅诚德迎宾杯', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('101', '1396205834', '1', '编辑广告位置: idx_step_right', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('102', '1396205869', '1', '添加商品: 佳洁士防蛀修护牙膏(晶莹薄荷香型)200g ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('103', '1396205872', '1', '添加商品: 海洋工作室威忌杯B16112', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('104', '1396205897', '1', '添加商品: 海洋经典红酒杯B501R08', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('105', '1396205932', '1', '添加商品: 90g佳洁士全优7效牙膏 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('106', '1396205961', '1', '添加商品: 思宝双龙A2真空杯', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('107', '1396205985', '1', '添加商品: 富光超炫保温杯FGL-3121', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('108', '1396205999', '1', '添加商品: 120g佳洁士茶爽炫白牙膏', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('109', '1396206040', '1', '添加商品: 苏泊尔汤宝系列保温提锅KF25A1', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('110', '1396206132', '1', '添加商品: 珠宝黄金', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('111', '1396206139', '1', '添加商品: 华美小号妙奇油壶HM-9004', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('112', '1396206170', '1', '添加商品: 振兴圆型玻璃调味瓶YH5995', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('113', '1396206194', '1', '添加商品: 珠宝黄金', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('114', '1396206202', '1', '添加商品: 清风200抽*3原木纯品抽取式面纸 [200张*3包]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('115', '1396206204', '1', '添加商品: 紫丁香优质酱醋瓶JA2002', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('116', '1396206218', '1', '添加商品: 珠宝黄金', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('117', '1396206244', '1', '添加商品: 茶花微波蒸器2708 1*24 [长型 1200ml]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('118', '1396206266', '1', '添加商品: 舒洁200抽迪士尼软抽', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('119', '1396206268', '1', '添加商品: 茶花2745 450ml微波杯', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('120', '1396206294', '1', '添加商品: 珠宝黄金', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('121', '1396206295', '1', '添加商品: 茶花微波大号专用煲2707', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('122', '1396206316', '1', '添加商品: 舒洁200抽盒抽', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('123', '1396206345', '1', '添加商品: 苏泊尔大漏勺KT04B1', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('124', '1396206368', '1', '添加商品: 珍爱80P筒装湿巾 [80片] ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('125', '1396206372', '1', '添加商品: 富尔兴欧派不锈钢主食匙FC-225', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('126', '1396206406', '1', '添加商品: 富尔兴欧派不锈钢勺FC-222', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('127', '1396206441', '1', '添加商品: 10片清风绿茶湿巾 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('128', '1396206453', '1', '添加商品: 巧媳妇钢塑柄磨刀棒AM-006', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('129', '1396206479', '1', '添加商品: 张小泉咖啡彩木系列切片刀D11102300', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('130', '1396206501', '1', '添加商品: 张小泉中片刀N5472', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('131', '1396206596', '1', '添加商品: 妙洁MOPFD套布拖', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('132', '1396206603', '1', '添加商品: 海信LED39K360X3D电视', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('133', '1396206617', '1', '添加广告位置: idx_step_left', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('134', '1396206621', '1', '添加商品: 海信LED55K360X3D电视', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('135', '1396206642', '1', '添加商品: 海信LED39K300J电视', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('136', '1396206671', '1', '添加广告: idx_step_left_1', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('137', '1396206676', '1', '添加商品: 思高第二代魔力地圈(平拖)', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('138', '1396206691', '1', '添加商品: 美的215L三门电脑冰箱', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('139', '1396206710', '1', '添加商品: 海尔BCD-225SKHCB冰箱', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('140', '1396206735', '1', '添加商品: 海尔BCD-206STCM冰箱', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('141', '1396206776', '1', '添加商品: 思高动感吸尘魔力洁地擦促销装', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('142', '1396206809', '1', '添加商品: 飞利浦GC2810电熨斗', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('143', '1396206831', '1', '添加商品: 飞利浦GC2820电熨斗', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('144', '1396206843', '1', '添加商品: 美丽雅两个装钢丝球(促销装)', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('145', '1396206869', '1', '添加商品: 飞利浦GC2830电熨斗', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('146', '1396206917', '1', '添加商品: 思高灵巧洁地擦促销装', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('147', '1396206921', '1', '添加商品: 飞利浦HD9220空气炸锅', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('148', '1396206948', '1', '添加商品: 飞利浦HD9316电水壶', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('149', '1396206969', '1', '添加商品: 飞利浦HD9312电水壶', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('150', '1396207052', '1', '添加商品: 茶花四组方便调味盒2527 [四格]', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('151', '1396207068', '1', '添加商品: 紫丁香调味缸套装JA300', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('152', '1396207095', '1', '添加商品: 优美家时尚3组调味盒KC-7008', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('153', '1396207159', '1', '添加商品: 华美小号妙奇油壶HM-9004', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('154', '1396207183', '1', '添加商品: 振兴圆型玻璃调味瓶YH5995', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('155', '1396207224', '1', '添加商品: 紫丁香优质酱醋瓶', '192.168.1.10');
+INSERT INTO `dsd_admin_log` VALUES ('156', '1396207295', '1', '编辑商品: 珠宝黄金', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('157', '1396207343', '1', '编辑商品: 胸花', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('158', '1396207377', '1', '编辑商品: 戒指', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('159', '1396207407', '1', '编辑商品: 项链', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('160', '1396207433', '1', '编辑商品: 胸花', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('161', '1396207634', '1', '添加商品: 胸花', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('162', '1396207676', '1', '添加商品: 康师傅3+2饼干 375g [香草]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('163', '1396207677', '1', '添加商品: 戒指', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('164', '1396207699', '1', '添加商品: 项链', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('165', '1396207733', '1', '添加商品: 戒指', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('166', '1396207735', '1', '添加商品: 康师傅3+2饼干 375g [奶油] ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('167', '1396207764', '1', '添加商品: 耳饰', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('168', '1396207799', '1', '添加商品: 康师傅3+2饼干 375g [柠檬] ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('169', '1396207865', '1', '添加商品: 391g奥利奥双心脆威化 [草莓+巧克力]', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('170', '1396207969', '1', '添加商品: 拉杆箱', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('171', '1396208027', '1', '编辑商品: 拉杆箱', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('172', '1396208052', '1', '添加商品: 72g农心辛拉面香菇牛肉面(杯)', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('173', '1396208078', '1', '添加商品: 拉杆箱', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('174', '1396208093', '1', '添加商品: 拉杆箱', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('175', '1396208096', '1', '添加商品: 117g农心辣白菜辛拉面（桶面） ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('176', '1396208107', '1', '添加商品: 拉杆箱', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('177', '1396208151', '1', '添加商品: 旅行包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('178', '1396208166', '1', '添加商品: 70g农心上海汤面（鸡肉面）', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('179', '1396208223', '1', '添加商品: 旅行包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('180', '1396208227', '1', '添加商品: 120g*5农心辣白菜五连包 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('181', '1396208274', '1', '编辑商品: 120g*5农心辣白菜五连包 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('182', '1396208282', '1', '添加商品: 旅行包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('183', '1396208361', '1', '添加商品: 120g*5农心乌龙面', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('184', '1396208495', '1', '添加商品: 240g好时黑巧克力家庭装 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('185', '1396208545', '1', '添加商品: 240g好时曲奇奶香白巧克力 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('186', '1396208551', '1', '添加商品: 金莱克', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('187', '1396208578', '1', '添加商品: 李宁', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('188', '1396208593', '1', '添加商品: 100g好时精选巧克力礼盒(牛奶巧克力) ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('189', '1396208602', '1', '添加商品: 耐克', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('190', '1396208633', '1', '添加商品: 运动鞋', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('191', '1396208651', '1', '添加商品: 216g德芙脆香米（碗装） ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('192', '1396208697', '1', '添加商品:   135g德芙m&ms逗趣礼盒 [花生] ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('193', '1396208789', '1', '添加商品: 200g雨润肉枣 餐桌特色食品 腊味小香肠 腊枣 ', '192.168.1.8');
+INSERT INTO `dsd_admin_log` VALUES ('194', '1396208949', '1', '添加广告: idx_step_mid_1', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('195', '1396208953', '1', '添加商品: 户外鞋', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('196', '1396208973', '1', '添加商品: 冲锋衣', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('197', '1396209004', '1', '编辑广告位置: idx_step_mid', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('198', '1396209007', '1', '添加商品: 木林森户外鞋', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('199', '1396209072', '1', '添加商品: 防水户外服装', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('200', '1396209311', '1', '添加商品: 运动服', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('201', '1396209328', '1', '添加商品: 运动服', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('202', '1396209343', '1', '添加商品: 运动服', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('203', '1396209400', '1', '添加商品: 运动包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('204', '1396209404', '1', '编辑商品:   135g德芙m&ms逗趣礼盒 [花生] ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('205', '1396209416', '1', '添加商品: 运动包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('206', '1396209424', '1', '编辑商品:   135g德芙m&ms逗趣礼盒 [花生] ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('207', '1396209456', '1', '添加商品: 运动包', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('208', '1396209465', '1', '编辑商品: 100g好时精选巧克力礼盒(牛奶巧克力) ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('209', '1396209483', '1', '编辑商品: 240g好时黑巧克力家庭装 ', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('210', '1396209506', '1', '编辑商品: 70g农心上海汤面（鸡肉面）', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('211', '1396209851', '1', '编辑商品: 耳饰', '192.168.1.7');
+INSERT INTO `dsd_admin_log` VALUES ('212', '1396213199', '1', '添加广告: idx_step_left_2', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('213', '1396213240', '1', '添加广告: idx_step_right_2', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('214', '1396213283', '1', '编辑广告: idx_step_right_2', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('215', '1396213320', '1', '添加广告: idx_step_left_3', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('216', '1396213379', '1', '添加广告: idx_step_left_4', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('217', '1396213410', '1', '添加广告: idx_step_left_5', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('218', '1396213425', '1', '编辑广告: idx_step_left_5', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('219', '1396213437', '1', '编辑广告: idx_step_left_4', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('220', '1396213484', '1', '添加广告: idx_step_right_5', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('221', '1396213547', '1', '添加广告: idx_step_right_4', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('222', '1396213582', '1', '添加广告: idx_step_right_3', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('223', '1396213608', '1', '编辑广告: idx_step_right_1', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('224', '1396213675', '1', '添加广告: idx_step_mid_2', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('225', '1396213710', '1', '添加广告: idx_step_mid_3', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('226', '1396213743', '1', '添加广告: idx_step_mid_4', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('227', '1396213781', '1', '添加广告: idx_step_mid', '127.0.0.1');
+INSERT INTO `dsd_admin_log` VALUES ('228', '1396213787', '1', '编辑广告: idx_step_mid_5', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `dsd_admin_message`
@@ -312,7 +504,7 @@ CREATE TABLE `dsd_admin_user` (
 -- ----------------------------
 -- Records of dsd_admin_user
 -- ----------------------------
-INSERT INTO `dsd_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1396129834', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `dsd_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1396205390', '192.168.1.7', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for `dsd_adsense`
@@ -361,12 +553,15 @@ CREATE TABLE `dsd_ad_position` (
   `position_desc` varchar(255) NOT NULL DEFAULT '',
   `position_style` text NOT NULL,
   PRIMARY KEY (`position_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_ad_position
 -- ----------------------------
 INSERT INTO `dsd_ad_position` VALUES ('1', '首页资讯下方广告位', '245', '96', '', '<div>{$ads[0]}</div>');
+INSERT INTO `dsd_ad_position` VALUES ('2', 'idx_step_mid', '723', '200', '首页楼层内广告位 中间', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `dsd_ad_position` VALUES ('3', 'idx_step_right', '243', '190', '首页楼层内广告位 右侧', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `dsd_ad_position` VALUES ('4', 'idx_step_left', '242', '310', '首页楼层内广告位 左侧', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 
 -- ----------------------------
 -- Table structure for `dsd_affiliate_log`
@@ -674,12 +869,48 @@ CREATE TABLE `dsd_brand` (
   `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`brand_id`),
   KEY `is_show` (`is_show`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_brand
 -- ----------------------------
 INSERT INTO `dsd_brand` VALUES ('1', '青岛', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('2', '圣元', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('3', '上好佳', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('4', '合生元', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('5', '亨氏', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('6', '贝因美', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('7', '百乐麦', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('8', '好丽友', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('9', '乐扣乐扣', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('10', '高露洁', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('11', '佳洁士', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('12', '雅诚', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('13', '海洋工作室', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('14', '思宝双龙', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('15', '清风', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('16', '振兴', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('17', '紫丁香', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('18', '茶花', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('19', '巧媳妇', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('20', '张小泉', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('21', '妙洁', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('22', '海信', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('23', '高', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('24', '美的', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('25', '思高', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('26', '美丽雅', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('27', '飞利浦', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('28', '康师傅', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('29', '农心', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('30', '好时', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('31', '李宁', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('32', '耐克', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('33', '金莱克', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('34', '德芙', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('35', '桂花庄', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('36', '木林森', '', '', '', '50', '1');
+INSERT INTO `dsd_brand` VALUES ('37', '威王', '', '', '', '50', '1');
 
 -- ----------------------------
 -- Table structure for `dsd_card`
@@ -751,7 +982,7 @@ CREATE TABLE `dsd_category` (
   `filter_attr` varchar(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cat_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_category
@@ -785,6 +1016,34 @@ INSERT INTO `dsd_category` VALUES ('26', '旅行箱包', '', '', '7', '2', '', '
 INSERT INTO `dsd_category` VALUES ('27', '运动鞋', '', '', '8', '1', '', '', '0', '', '1', '0', '');
 INSERT INTO `dsd_category` VALUES ('28', '运动服包', '', '', '8', '2', '', '', '0', '', '1', '0', '');
 INSERT INTO `dsd_category` VALUES ('29', '户外鞋服', '', '', '8', '3', '', '', '0', '', '1', '0', '');
+INSERT INTO `dsd_category` VALUES ('30', '幼婴配方奶粉', '', '', '16', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('31', '休闲零食', '', '', '1', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('32', '孕产奶粉', '', '', '16', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('33', '虾片/虾条', '', '', '31', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('34', '益生菌', '', '', '17', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('35', '清火开胃', '', '', '34', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('36', '婴儿饼干', '', '', '18', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('37', '米粉/汤粥', '', '', '18', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('38', '营养面', '', '', '18', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('39', '果泥', '', '', '18', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('40', '薯片/薯条', '', '', '31', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('41', '肉松', '', '', '18', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('42', '牙膏', '', '', '12', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('43', '纸制品', '', '', '3', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('44', '胸花', '', '', '25', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('45', '戒指', '', '', '25', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('46', '项链', '', '', '25', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('47', '饼干糕点', '', '', '1', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('48', '夹心饼干', '', '', '47', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('49', '耳饰', '', '', '45', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('50', '方便速食', '', '', '1', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('51', '方便面', '', '', '50', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('52', '拉杆箱', '', '', '26', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('53', '旅行包', '', '', '26', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('54', '糖果巧克力', '', '', '1', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('55', '巧克力', '', '', '54', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('56', '冷藏冷冻食品', '', '', '1', '50', '', '', '0', '', '1', '0', '0');
+INSERT INTO `dsd_category` VALUES ('57', '耳饰', '', '', '25', '50', '', '', '0', '', '1', '0', '0');
 
 -- ----------------------------
 -- Table structure for `dsd_cat_recommend`
@@ -1144,12 +1403,141 @@ CREATE TABLE `dsd_goods` (
   KEY `promote_start_date` (`promote_start_date`),
   KEY `goods_number` (`goods_number`),
   KEY `sort_order` (`sort_order`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_goods
 -- ----------------------------
-INSERT INTO `dsd_goods` VALUES ('1', '9', 'dsd000000', '青岛崂山啤酒 330ml', '+', '0', '1', '', '0', '0.000', '3.00', '2.80', '2.50', '1396080000', '1397030400', '0', '', '', '<p>&nbsp;青岛崂山啤酒 330ml</p>', 'images/201403/thumb_img/1_thumb_G_1396121017928.jpg', 'images/201403/goods_img/1_G_1396121017397.jpg', 'images/201403/source_img/1_G_1396121017938.jpg', '1', '', '1', '1', '0', '0', '1396121017', '100', '0', '0', '0', '1', '1', '0', '1396130026', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('1', '9', 'dsd000000', '青岛崂山啤酒 330ml', '+', '1', '1', '', '0', '0.000', '3.00', '2.80', '2.50', '1396080000', '1397030400', '0', '', '', '<p>&nbsp;青岛崂山啤酒 330ml</p>', 'images/201403/thumb_img/1_thumb_G_1396121017928.jpg', 'images/201403/goods_img/1_G_1396121017397.jpg', 'images/201403/source_img/1_G_1396121017938.jpg', '1', '', '1', '1', '0', '0', '1396121017', '100', '0', '0', '0', '1', '1', '0', '1396130026', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('2', '30', 'dsd000002', '400g圣元进口优博较大婴儿奶粉盒装2段', '+', '0', '2', '', '0', '0.000', '480.00', '400.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/2_thumb_G_1396204122339.jpg', 'images/201403/goods_img/2_G_1396204122391.jpg', 'images/201403/source_img/2_G_1396204122016.jpg', '1', '', '1', '1', '0', '0', '1396204121', '100', '0', '0', '0', '0', '0', '0', '1396204121', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('3', '30', 'dsd000003', '900g圣元优聪普1段奶粉', '+', '0', '2', '', '0', '0.000', '720.00', '600.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/3_thumb_G_1396204245806.jpg', 'images/201403/goods_img/3_G_1396204245869.jpg', 'images/201403/source_img/3_G_1396204245714.jpg', '1', '', '1', '1', '0', '0', '1396204245', '100', '0', '0', '0', '0', '0', '0', '1396204245', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('4', '30', 'dsd000004', '900g圣元进口优博听装1段', '+', '0', '2', '', '0', '0.000', '441.59', '368.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/4_thumb_G_1396204288318.jpg', 'images/201403/goods_img/4_G_1396204288152.jpg', 'images/201403/source_img/4_G_1396204288498.jpg', '1', '', '1', '1', '0', '0', '1396204288', '100', '0', '0', '0', '0', '0', '0', '1396204288', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('5', '30', 'dsd000005', '400g美赞臣安婴儿A+无乳糖奶粉', '+', '0', '2', '', '0', '0.000', '165.60', '138.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/5_thumb_G_1396204317259.jpg', 'images/201403/goods_img/5_G_1396204317174.jpg', 'images/201403/source_img/5_G_1396204317106.jpg', '1', '', '1', '1', '0', '0', '1396204317', '100', '0', '0', '0', '0', '0', '0', '1396204317', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('6', '32', 'dsd000006', '900g惠氏爱儿乐妈妈奶粉', '+', '0', '2', '', '0', '0.000', '240.00', '200.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/6_thumb_G_1396204438603.jpg', 'images/201403/goods_img/6_G_1396204438306.jpg', 'images/201403/source_img/6_G_1396204438088.jpg', '1', '', '1', '1', '0', '0', '1396204438', '100', '0', '0', '0', '0', '0', '0', '1396204438', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('7', '32', 'dsd000007', '900g美赞臣安婴妈妈A+', '+', '0', '2', '', '0', '0.000', '273.59', '228.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/7_thumb_G_1396204465855.jpg', 'images/201403/goods_img/7_G_1396204465734.jpg', 'images/201403/source_img/7_G_1396204465102.jpg', '1', '', '1', '1', '0', '0', '1396204465', '100', '0', '0', '0', '0', '0', '0', '1396204465', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('8', '32', 'dsd000008', '400g雅士利能慧孕妇奶粉', '+', '0', '2', '', '0', '0.000', '240.00', '200.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/8_thumb_G_1396204527227.jpg', 'images/201403/goods_img/8_G_1396204527819.jpg', 'images/201403/source_img/8_G_1396204527352.jpg', '1', '', '1', '1', '0', '0', '1396204527', '100', '0', '0', '0', '0', '0', '0', '1396204527', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('9', '34', 'dsd000009', '39g合生元儿童益生菌冲剂', '+', '0', '2', '', '0', '0.000', '46.80', '39.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1396204618', '100', '0', '0', '0', '0', '0', '0', '1396204618', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('10', '33', 'dsd000010', '虾片/虾条', '+', '0', '3', '', '0', '0.000', '6.24', '5.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/10_thumb_G_1396204648920.jpg', 'images/201403/goods_img/10_G_1396204648329.jpg', 'images/201403/source_img/10_G_1396204648385.jpg', '1', '', '1', '1', '0', '0', '1396204648', '100', '0', '0', '0', '0', '0', '0', '1396204854', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('11', '34', 'dsd000011', '90g合生元儿童益生菌冲剂', '+', '0', '4', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/11_thumb_G_1396204672623.jpg', 'images/201403/goods_img/11_G_1396204672226.jpg', 'images/201403/source_img/11_G_1396204672050.jpg', '1', '', '1', '1', '0', '0', '1396204672', '100', '0', '0', '0', '0', '0', '0', '1396204672', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('12', '35', 'dsd000012', '120g亨氏清儿润香橙奶伴侣', '+', '0', '5', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/12_thumb_G_1396204747421.jpg', 'images/201403/goods_img/12_G_1396204747306.jpg', 'images/201403/source_img/12_G_1396204747347.jpg', '1', '', '1', '1', '0', '0', '1396204747', '100', '0', '0', '0', '0', '0', '0', '1396204747', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('13', '36', 'dsd000013', '64g亨氏磨牙棒 [香橙味]', '+', '0', '5', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1396204843', '100', '0', '0', '0', '0', '0', '0', '1396204843', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('14', '36', 'dsd000014', '64g亨氏磨牙棒 [牛奶味]', '+', '0', '5', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/14_thumb_G_1396204872253.jpg', 'images/201403/goods_img/14_G_1396204872114.jpg', 'images/201403/source_img/14_G_1396204872117.jpg', '1', '', '1', '1', '0', '0', '1396204872', '100', '0', '0', '0', '0', '0', '0', '1396204872', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('15', '33', 'dsd000015', '上好佳虾片 [龙虾味 40g]', '+', '0', '3', '', '0', '0.000', '3.48', '2.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/15_thumb_G_1396205038874.jpg', 'images/201403/goods_img/15_G_1396205038146.jpg', 'images/201403/source_img/15_G_1396205038239.jpg', '1', '', '1', '1', '0', '0', '1396204951', '100', '0', '0', '0', '0', '0', '0', '1396205038', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('16', '37', 'dsd000016', '225g亨氏淮山薏米米粉(1段)', '+', '0', '5', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1396204963', '100', '0', '0', '0', '0', '0', '0', '1396204963', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('17', '37', 'dsd000017', '225g贝因美DHA蔬菜营养米粉', '+', '0', '6', '', '0', '0.000', '27.00', '22.50', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1396204982', '100', '0', '0', '0', '0', '0', '0', '1396204982', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('18', '38', 'dsd000018', '208g贝因美黑芝麻营养面条', '+', '0', '6', '', '0', '0.000', '14.76', '12.30', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/18_thumb_G_1396205074979.jpg', 'images/201403/goods_img/18_G_1396205074316.jpg', 'images/201403/source_img/18_G_1396205074509.jpg', '1', '', '1', '1', '0', '0', '1396205074', '100', '0', '0', '0', '0', '0', '0', '1396205074', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('19', '38', 'dsd000019', '280g百乐麦阶段面(1)', '+', '0', '7', '', '0', '0.000', '11.76', '9.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/19_thumb_G_1396205102360.jpg', 'images/201403/goods_img/19_G_1396205102809.jpg', 'images/201403/source_img/19_G_1396205102753.jpg', '1', '', '1', '1', '0', '0', '1396205102', '100', '0', '0', '0', '0', '0', '0', '1396205102', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('20', '33', 'dsd000020', '上好佳虾条 [40g] ', '+', '0', '3', '', '0', '0.000', '3.48', '2.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/20_thumb_G_1396205119122.jpg', 'images/201403/goods_img/20_G_1396205119013.jpg', 'images/201403/source_img/20_G_1396205119075.jpg', '1', '', '1', '1', '0', '0', '1396205119', '100', '0', '0', '0', '0', '0', '0', '1396205119', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('21', '39', 'dsd000021', '120g亨氏猕猴桃豌豆菠菜泥', '+', '0', '5', '', '0', '0.000', '5.76', '4.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/21_thumb_G_1396205163818.jpg', 'images/201403/goods_img/21_G_1396205163373.jpg', 'images/201403/source_img/21_G_1396205163224.jpg', '1', '', '1', '1', '0', '0', '1396205163', '100', '0', '0', '0', '0', '0', '0', '1396205163', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('22', '39', 'dsd000022', '亨氏乐维滋蔬乐2+2苹果草莓番茄胡萝卜泥 120g', '+', '0', '5', '', '0', '0.000', '5.76', '4.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/22_thumb_G_1396205180918.jpg', 'images/201403/goods_img/22_G_1396205180411.jpg', 'images/201403/source_img/22_G_1396205180760.jpg', '1', '', '1', '1', '0', '0', '1396205180', '100', '0', '0', '0', '0', '0', '0', '1396205180', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('23', '33', 'dsd000023', '40g上好佳洋葱圈', '+', '0', '3', '', '0', '0.000', '3.48', '2.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/23_thumb_G_1396205195119.jpg', 'images/201403/goods_img/23_G_1396205195677.jpg', 'images/201403/source_img/23_G_1396205195971.jpg', '1', '', '1', '1', '0', '0', '1396205195', '100', '0', '0', '0', '0', '0', '0', '1396205195', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('24', '39', 'dsd000024', '120g亨氏苹果玉米南瓜泥', '+', '0', '5', '', '0', '0.000', '5.76', '4.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/24_thumb_G_1396205200532.jpg', 'images/201403/goods_img/24_G_1396205200918.jpg', 'images/201403/source_img/24_G_1396205200118.jpg', '1', '', '1', '1', '0', '0', '1396205200', '100', '0', '0', '0', '0', '0', '0', '1396205200', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('25', '41', 'dsd000025', '115g贝因美宝宝原味肉酥', '+', '0', '6', '', '0', '0.000', '43.19', '36.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/25_thumb_G_1396205265027.jpg', 'images/201403/goods_img/25_G_1396205265108.jpg', 'images/201403/source_img/25_G_1396205265157.jpg', '1', '', '1', '1', '0', '0', '1396205265', '100', '0', '0', '0', '0', '0', '0', '1396205265', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('26', '41', 'dsd000026', '115g贝因美胡萝卜营养肉酥', '+', '0', '6', '', '0', '0.000', '31.20', '26.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/26_thumb_G_1396205298296.jpg', 'images/201403/goods_img/26_G_1396205298939.jpg', 'images/201403/source_img/26_G_1396205298001.jpg', '1', '', '1', '1', '0', '0', '1396205298', '100', '0', '0', '0', '0', '0', '0', '1396205298', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('27', '40', 'dsd000027', '40g好丽友香焗原味', '+', '1', '8', '', '0', '0.000', '3.48', '2.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/27_thumb_G_1396205377211.jpg', 'images/201403/goods_img/27_G_1396205377029.jpg', 'images/201403/source_img/27_G_1396205377466.jpg', '1', '', '1', '1', '0', '0', '1396205377', '100', '0', '0', '0', '0', '0', '0', '1396205377', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('28', '40', 'dsd000028', '40g好丽友烤鸡比莎薯片', '+', '0', '8', '', '0', '0.000', '3.84', '3.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/28_thumb_G_1396205438374.jpg', 'images/201403/goods_img/28_G_1396205438903.jpg', 'images/201403/source_img/28_G_1396205438820.jpg', '1', '', '1', '1', '0', '0', '1396205438', '100', '0', '0', '0', '0', '0', '0', '1396205438', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('29', '40', 'dsd000029', '40g好丽友番茄酱味薯条', '+', '1', '8', '', '0', '0.000', '3.84', '3.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/29_thumb_G_1396205480924.jpg', 'images/201403/goods_img/29_G_1396205480950.jpg', 'images/201403/source_img/29_G_1396205480412.jpg', '1', '', '1', '1', '0', '0', '1396205480', '100', '0', '0', '0', '0', '0', '0', '1396205480', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('30', '19', 'dsd000030', '希乐清阳水瓶xl-3504 [500ml]', '+', '0', '6', '', '0', '0.000', '19.20', '16.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/30_thumb_G_1396205580372.jpg', 'images/201403/goods_img/30_G_1396205580879.jpg', 'images/201403/source_img/30_G_1396205580617.jpg', '1', '', '1', '1', '0', '0', '1396205563', '100', '0', '0', '0', '0', '0', '0', '1396205631', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('31', '42', 'dsd000031', '高露洁旅行套装/折叠牙刷加50克高露洁冰爽防蛀牙膏 ', '+', '0', '0', '', '0', '0.000', '15.48', '12.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/31_thumb_G_1396205655690.jpg', 'images/201403/goods_img/31_G_1396205655928.jpg', 'images/201403/source_img/31_G_1396205655522.jpg', '1', '', '1', '1', '0', '0', '1396205655', '100', '0', '0', '0', '0', '0', '0', '1396205674', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('32', '19', 'dsd000032', '乐扣乐扣500ml炫彩运动水杯HPP721T(蓝色) [中号 蓝', '+', '0', '10', '', '0', '0.000', '73.20', '61.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/32_thumb_G_1396205672483.jpg', 'images/201403/goods_img/32_G_1396205672090.jpg', 'images/201403/source_img/32_G_1396205672218.jpg', '1', '', '1', '1', '0', '0', '1396205672', '100', '0', '0', '0', '0', '0', '0', '1396205699', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('33', '19', 'dsd000033', '乐扣乐扣炫彩运动茶杯（黄）HPP722TO', '+', '0', '9', '', '0', '0.000', '81.60', '68.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/33_thumb_G_1396205688993.jpg', 'images/201403/goods_img/33_G_1396205688403.jpg', 'images/201403/source_img/33_G_1396205688671.jpg', '1', '', '1', '1', '0', '0', '1396205688', '100', '0', '0', '0', '0', '0', '0', '1396205688', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('34', '42', 'dsd000034', '佳洁士珍珠盐白牙膏(柠檬清新)140g ', '+', '0', '11', '', '0', '0.000', '9.48', '7.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/34_thumb_G_1396205793363.jpg', 'images/201403/goods_img/34_G_1396205793136.jpg', 'images/201403/source_img/34_G_1396205793216.jpg', '1', '', '1', '1', '0', '0', '1396205748', '100', '0', '0', '0', '0', '0', '0', '1396205818', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('35', '19', 'dsd000035', '雅诚德情侣对杯', '+', '0', '12', '', '0', '0.000', '57.59', '48.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/35_thumb_G_1396205777123.jpg', 'images/201403/goods_img/35_G_1396205777429.jpg', 'images/201403/source_img/35_G_1396205777470.jpg', '1', '', '1', '1', '0', '0', '1396205777', '100', '0', '0', '0', '0', '0', '0', '1396205777', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('36', '19', 'dsd000036', '雅诚德珍妮杯', '+', '0', '12', '', '0', '0.000', '21.59', '18.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/36_thumb_G_1396205803539.jpg', 'images/201403/goods_img/36_G_1396205803045.jpg', 'images/201403/source_img/36_G_1396205803536.jpg', '1', '', '1', '1', '0', '0', '1396205803', '100', '0', '0', '0', '0', '0', '0', '1396205803', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('37', '19', 'dsd000037', '雅诚德迎宾杯', '+', '0', '12', '', '0', '0.000', '130.79', '109.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/37_thumb_G_1396205822577.jpg', 'images/201403/goods_img/37_G_1396205822213.jpg', 'images/201403/source_img/37_G_1396205822322.jpg', '1', '', '1', '1', '0', '0', '1396205822', '100', '0', '0', '0', '0', '0', '0', '1396205822', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('38', '42', 'dsd000038', '佳洁士防蛀修护牙膏(晶莹薄荷香型)200g ', '+', '0', '11', '', '0', '0.000', '16.68', '13.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/38_thumb_G_1396205869977.jpg', 'images/201403/goods_img/38_G_1396205869001.jpg', 'images/201403/source_img/38_G_1396205869469.jpg', '1', '', '1', '1', '0', '0', '1396205869', '100', '0', '0', '0', '0', '0', '0', '1396205869', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('39', '19', 'dsd000039', '海洋工作室威忌杯B16112', '+', '0', '13', '', '0', '0.000', '18.00', '15.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/39_thumb_G_1396205872946.jpg', 'images/201403/goods_img/39_G_1396205872026.jpg', 'images/201403/source_img/39_G_1396205872665.jpg', '1', '', '1', '1', '0', '0', '1396205872', '100', '0', '0', '0', '0', '0', '0', '1396205872', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('40', '19', 'dsd000040', '海洋经典红酒杯B501R08', '+', '0', '13', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/40_thumb_G_1396205897944.jpg', 'images/201403/goods_img/40_G_1396205897522.jpg', 'images/201403/source_img/40_G_1396205897551.jpg', '1', '', '1', '1', '0', '0', '1396205897', '100', '0', '0', '0', '0', '0', '0', '1396205897', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('41', '42', 'dsd000041', '90g佳洁士全优7效牙膏 ', '+', '0', '11', '', '0', '0.000', '21.00', '17.50', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/41_thumb_G_1396205932159.jpg', 'images/201403/goods_img/41_G_1396205932637.jpg', 'images/201403/source_img/41_G_1396205932150.jpg', '1', '', '1', '1', '0', '0', '1396205932', '100', '0', '0', '0', '0', '0', '0', '1396205932', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('42', '19', 'dsd000042', '思宝双龙A2真空杯', '+', '0', '14', '', '0', '0.000', '142.79', '119.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/42_thumb_G_1396205961912.jpg', 'images/201403/goods_img/42_G_1396205961947.jpg', 'images/201403/source_img/42_G_1396205961018.jpg', '1', '', '1', '1', '0', '0', '1396205961', '100', '0', '0', '0', '0', '0', '0', '1396205961', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('43', '19', 'dsd000043', '富光超炫保温杯FGL-3121', '+', '0', '14', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/43_thumb_G_1396205985325.jpg', 'images/201403/goods_img/43_G_1396205985443.jpg', 'images/201403/source_img/43_G_1396205985977.jpg', '1', '', '1', '1', '0', '0', '1396205985', '100', '0', '0', '0', '0', '0', '0', '1396205985', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('44', '42', 'dsd000044', '120g佳洁士茶爽炫白牙膏', '+', '0', '11', '', '0', '0.000', '13.08', '10.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/44_thumb_G_1396205999173.jpg', 'images/201403/goods_img/44_G_1396205999838.jpg', 'images/201403/source_img/44_G_1396205999696.jpg', '1', '', '1', '1', '0', '0', '1396205999', '100', '0', '0', '0', '0', '0', '0', '1396205999', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('45', '19', 'dsd000045', '苏泊尔汤宝系列保温提锅KF25A1', '+', '0', '14', '', '0', '0.000', '132.00', '110.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/45_thumb_G_1396206040650.jpg', 'images/201403/goods_img/45_G_1396206040099.jpg', 'images/201403/source_img/45_G_1396206040842.jpg', '1', '', '1', '1', '0', '0', '1396206040', '100', '0', '0', '0', '0', '0', '0', '1396206040', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('46', '44', 'dsd000046', '胸花', '+', '1', '0', '', '0', '0.000', '1920.00', '1600.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/46_thumb_G_1396206132921.jpg', 'images/201403/goods_img/46_G_1396206132231.jpg', 'images/201403/source_img/46_G_1396206132679.jpg', '1', '', '1', '1', '0', '0', '1396206132', '100', '0', '0', '0', '0', '0', '0', '1396207433', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('47', '20', 'dsd000047', '华美小号妙奇油壶HM-9004', '+', '0', '14', '', '0', '0.000', '118.80', '99.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/47_thumb_G_1396206139922.jpg', 'images/201403/goods_img/47_G_1396206139559.jpg', 'images/201403/source_img/47_G_1396206139425.jpg', '1', '', '1', '1', '0', '0', '1396206139', '100', '0', '0', '0', '0', '0', '0', '1396206139', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('90', '44', 'dsd000090', '胸花', '+', '0', '0', '', '0', '0.000', '3000.00', '2500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/90_thumb_G_1396207634132.jpg', 'images/201403/goods_img/90_G_1396207634426.jpg', 'images/201403/source_img/90_G_1396207634559.jpg', '1', '', '1', '1', '0', '0', '1396207634', '100', '0', '0', '0', '0', '0', '0', '1396207634', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('48', '20', 'dsd000048', '振兴圆型玻璃调味瓶YH5995', '+', '0', '16', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/48_thumb_G_1396206170197.jpg', 'images/201403/goods_img/48_G_1396206170243.jpg', 'images/201403/source_img/48_G_1396206170281.jpg', '1', '', '1', '1', '0', '0', '1396206170', '100', '0', '0', '0', '0', '0', '0', '1396206170', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('49', '46', 'dsd000049', '项链', '+', '0', '0', '', '0', '0.000', '3600.00', '3000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/49_thumb_G_1396206194430.jpg', 'images/201403/goods_img/49_G_1396206194100.jpg', 'images/201403/source_img/49_G_1396206194415.jpg', '1', '', '1', '1', '0', '0', '1396206194', '100', '0', '0', '0', '0', '0', '0', '1396207407', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('50', '43', 'dsd000050', '清风200抽*3原木纯品抽取式面纸 [200张*3包]', '+', '0', '15', '', '0', '0.000', '14.63', '12.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/50_thumb_G_1396206202084.jpg', 'images/201403/goods_img/50_G_1396206202619.jpg', 'images/201403/source_img/50_G_1396206202667.jpg', '1', '', '1', '1', '0', '0', '1396206202', '100', '0', '0', '0', '0', '0', '0', '1396206202', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('51', '20', 'dsd000051', '紫丁香优质酱醋瓶JA2002', '+', '0', '17', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/51_thumb_G_1396206204996.jpg', 'images/201403/goods_img/51_G_1396206204609.jpg', 'images/201403/source_img/51_G_1396206204444.jpg', '1', '', '1', '1', '0', '0', '1396206204', '100', '0', '0', '0', '0', '0', '0', '1396206204', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('52', '45', 'dsd000052', '戒指', '+', '0', '0', '', '0', '0.000', '2400.00', '2000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/52_thumb_G_1396206218275.jpg', 'images/201403/goods_img/52_G_1396206218475.jpg', 'images/201403/source_img/52_G_1396206218680.jpg', '1', '', '1', '1', '0', '0', '1396206218', '100', '0', '0', '0', '0', '0', '0', '1396207377', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('53', '20', 'dsd000053', '茶花微波蒸器2708 1*24 [长型 1200ml]', '+', '0', '18', '', '0', '0.000', '27.47', '22.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/53_thumb_G_1396206244869.jpg', 'images/201403/goods_img/53_G_1396206244501.jpg', 'images/201403/source_img/53_G_1396206244687.jpg', '1', '', '1', '1', '0', '0', '1396206244', '100', '0', '0', '0', '0', '0', '0', '1396206244', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('54', '43', 'dsd000054', '舒洁200抽迪士尼软抽', '+', '0', '0', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/54_thumb_G_1396206266372.jpg', 'images/201403/goods_img/54_G_1396206266855.jpg', 'images/201403/source_img/54_G_1396206266504.jpg', '1', '', '1', '1', '0', '0', '1396206266', '100', '0', '0', '0', '0', '0', '0', '1396206266', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('55', '20', 'dsd000055', '茶花2745 450ml微波杯', '+', '0', '18', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/55_thumb_G_1396206268537.jpg', 'images/201403/goods_img/55_G_1396206268265.jpg', 'images/201403/source_img/55_G_1396206268417.jpg', '1', '', '1', '1', '0', '0', '1396206268', '100', '0', '0', '0', '0', '0', '0', '1396206268', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('56', '44', 'dsd000056', '胸花', '+', '0', '0', '', '0', '0.000', '1800.00', '1500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/56_thumb_G_1396206294957.jpg', 'images/201403/goods_img/56_G_1396206294269.jpg', 'images/201403/source_img/56_G_1396206294312.jpg', '1', '', '1', '1', '0', '0', '1396206294', '100', '0', '0', '0', '0', '0', '0', '1396207343', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('57', '20', 'dsd000057', '茶花微波大号专用煲2707', '+', '0', '18', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/57_thumb_G_1396206295126.jpg', 'images/201403/goods_img/57_G_1396206295725.jpg', 'images/201403/source_img/57_G_1396206295505.jpg', '1', '', '1', '1', '0', '0', '1396206295', '100', '0', '0', '0', '0', '0', '0', '1396206295', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('58', '43', 'dsd000058', '舒洁200抽盒抽', '+', '0', '0', '', '0', '0.000', '12.60', '10.50', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/58_thumb_G_1396206316633.jpg', 'images/201403/goods_img/58_G_1396206316459.jpg', 'images/201403/source_img/58_G_1396206316876.jpg', '1', '', '1', '1', '0', '0', '1396206316', '100', '0', '0', '0', '0', '0', '0', '1396206316', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('59', '20', 'dsd000059', '苏泊尔大漏勺KT04B1', '+', '0', '18', '', '0', '0.000', '94.80', '79.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/59_thumb_G_1396206345774.jpg', 'images/201403/goods_img/59_G_1396206345449.jpg', 'images/201403/source_img/59_G_1396206345292.jpg', '1', '', '1', '1', '0', '0', '1396206345', '100', '0', '0', '0', '0', '0', '0', '1396206345', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('60', '43', 'dsd000060', '珍爱80P筒装湿巾 [80片] ', '+', '0', '0', '', '0', '0.000', '17.04', '14.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/60_thumb_G_1396206368412.jpg', 'images/201403/goods_img/60_G_1396206368429.jpg', 'images/201403/source_img/60_G_1396206368926.jpg', '1', '', '1', '1', '0', '0', '1396206368', '100', '0', '0', '0', '0', '0', '0', '1396206368', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('61', '20', 'dsd000061', '富尔兴欧派不锈钢主食匙FC-225', '+', '0', '18', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/61_thumb_G_1396206372531.jpg', 'images/201403/goods_img/61_G_1396206372235.jpg', 'images/201403/source_img/61_G_1396206372118.jpg', '1', '', '1', '1', '0', '0', '1396206372', '100', '0', '0', '0', '0', '0', '0', '1396206372', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('62', '20', 'dsd000062', '富尔兴欧派不锈钢勺FC-222', '+', '0', '18', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/62_thumb_G_1396206406581.jpg', 'images/201403/goods_img/62_G_1396206406527.jpg', 'images/201403/source_img/62_G_1396206406272.jpg', '1', '', '1', '1', '0', '0', '1396206406', '100', '0', '0', '0', '0', '0', '0', '1396206406', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('63', '43', 'dsd000063', '10片清风绿茶湿巾 ', '+', '0', '15', '', '0', '0.000', '4.68', '3.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/63_thumb_G_1396206441154.jpg', 'images/201403/goods_img/63_G_1396206441734.jpg', 'images/201403/source_img/63_G_1396206441172.jpg', '1', '', '1', '1', '0', '0', '1396206441', '100', '0', '0', '0', '0', '0', '0', '1396206441', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('64', '20', 'dsd000064', '巧媳妇钢塑柄磨刀棒AM-006', '+', '0', '19', '', '0', '0.000', '24.00', '20.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/64_thumb_G_1396206453033.jpg', 'images/201403/goods_img/64_G_1396206453391.jpg', 'images/201403/source_img/64_G_1396206453605.jpg', '1', '', '1', '1', '0', '0', '1396206453', '100', '0', '0', '0', '0', '0', '0', '1396206453', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('65', '20', 'dsd000065', '张小泉咖啡彩木系列切片刀D11102300', '+', '0', '20', '', '0', '0.000', '24.00', '20.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/65_thumb_G_1396206479297.jpg', 'images/201403/goods_img/65_G_1396206479763.jpg', 'images/201403/source_img/65_G_1396206479846.jpg', '1', '', '1', '1', '0', '0', '1396206479', '100', '0', '0', '0', '0', '0', '0', '1396206479', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('66', '20', 'dsd000066', '张小泉中片刀N5472', '+', '0', '20', '', '0', '0.000', '36.00', '30.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/66_thumb_G_1396206501441.jpg', 'images/201403/goods_img/66_G_1396206501874.jpg', 'images/201403/source_img/66_G_1396206501376.jpg', '1', '', '1', '1', '0', '0', '1396206501', '100', '0', '0', '0', '0', '0', '0', '1396206501', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('67', '15', 'dsd000067', '妙洁MOPFD套布拖', '+', '0', '21', '', '0', '0.000', '106.80', '89.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/67_thumb_G_1396206596967.jpg', 'images/201403/goods_img/67_G_1396206596558.jpg', 'images/201403/source_img/67_G_1396206596815.jpg', '1', '', '1', '1', '0', '0', '1396206596', '100', '0', '0', '0', '0', '0', '0', '1396206596', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('68', '21', 'dsd000068', '海信LED39K360X3D电视', '+', '0', '22', '', '0', '0.000', '6000.00', '5000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/68_thumb_G_1396206603567.jpg', 'images/201403/goods_img/68_G_1396206603041.jpg', 'images/201403/source_img/68_G_1396206603578.jpg', '1', '', '1', '1', '0', '0', '1396206603', '100', '0', '0', '0', '0', '0', '0', '1396206603', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('69', '21', 'dsd000069', '海信LED55K360X3D电视', '+', '0', '22', '', '0', '0.000', '7200.00', '6000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/69_thumb_G_1396206621562.jpg', 'images/201403/goods_img/69_G_1396206621955.jpg', 'images/201403/source_img/69_G_1396206621663.jpg', '1', '', '1', '1', '0', '0', '1396206621', '100', '0', '0', '0', '0', '0', '0', '1396206621', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('70', '21', 'dsd000070', '海信LED39K300J电视', '+', '0', '22', '', '0', '0.000', '3600.00', '3000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/70_thumb_G_1396206642929.jpg', 'images/201403/goods_img/70_G_1396206642001.jpg', 'images/201403/source_img/70_G_1396206642051.jpg', '1', '', '1', '1', '0', '0', '1396206642', '100', '0', '0', '0', '0', '0', '0', '1396206642', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('71', '15', 'dsd000071', '思高第二代魔力地圈(平拖)', '+', '0', '23', '', '0', '0.000', '99.00', '82.50', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/71_thumb_G_1396206676745.jpg', 'images/201403/goods_img/71_G_1396206676647.jpg', 'images/201403/source_img/71_G_1396206676193.jpg', '1', '', '1', '1', '0', '0', '1396206676', '100', '0', '0', '0', '0', '0', '0', '1396206676', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('72', '21', 'dsd000072', '美的215L三门电脑冰箱', '+', '0', '24', '', '0', '0.000', '3600.00', '3000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/72_thumb_G_1396206691981.jpg', 'images/201403/goods_img/72_G_1396206691949.jpg', 'images/201403/source_img/72_G_1396206691364.jpg', '1', '', '1', '1', '0', '0', '1396206691', '100', '0', '0', '0', '0', '0', '0', '1396206691', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('73', '21', 'dsd000073', '海尔BCD-225SKHCB冰箱', '+', '0', '24', '', '0', '0.000', '3600.00', '3000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/73_thumb_G_1396206710966.jpg', 'images/201403/goods_img/73_G_1396206710497.jpg', 'images/201403/source_img/73_G_1396206710334.jpg', '1', '', '1', '1', '0', '0', '1396206710', '100', '0', '0', '0', '0', '0', '0', '1396206710', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('74', '21', 'dsd000074', '海尔BCD-206STCM冰箱', '+', '0', '24', '', '0', '0.000', '24000.00', '20000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/74_thumb_G_1396206735450.jpg', 'images/201403/goods_img/74_G_1396206735991.jpg', 'images/201403/source_img/74_G_1396206735113.jpg', '1', '', '1', '1', '0', '0', '1396206735', '100', '0', '0', '0', '0', '0', '0', '1396206735', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('75', '15', 'dsd000075', '思高动感吸尘魔力洁地擦促销装', '+', '0', '25', '', '0', '0.000', '165.60', '138.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/75_thumb_G_1396206776211.jpg', 'images/201403/goods_img/75_G_1396206776832.jpg', 'images/201403/source_img/75_G_1396206776041.jpg', '1', '', '1', '1', '0', '0', '1396206776', '100', '0', '0', '0', '0', '0', '0', '1396206776', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('76', '22', 'dsd000076', '飞利浦GC2810电熨斗', '+', '0', '24', '', '0', '0.000', '120.00', '100.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/76_thumb_G_1396206809546.jpg', 'images/201403/goods_img/76_G_1396206809671.jpg', 'images/201403/source_img/76_G_1396206809725.jpg', '1', '', '1', '1', '0', '0', '1396206809', '100', '0', '0', '0', '0', '0', '0', '1396206809', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('77', '22', 'dsd000077', '飞利浦GC2820电熨斗', '+', '0', '24', '', '0', '0.000', '3600.00', '3000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/77_thumb_G_1396206831472.jpg', 'images/201403/goods_img/77_G_1396206831077.jpg', 'images/201403/source_img/77_G_1396206831318.jpg', '1', '', '1', '1', '0', '0', '1396206831', '100', '0', '0', '0', '0', '0', '0', '1396206831', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('78', '15', 'dsd000078', '美丽雅两个装钢丝球(促销装)', '+', '0', '26', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/78_thumb_G_1396206843610.jpg', 'images/201403/goods_img/78_G_1396206843045.jpg', 'images/201403/source_img/78_G_1396206843842.jpg', '1', '', '1', '1', '0', '0', '1396206843', '100', '0', '0', '0', '0', '0', '0', '1396206843', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('79', '22', 'dsd000079', '飞利浦GC2830电熨斗', '+', '0', '24', '', '0', '0.000', '600.00', '500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/79_thumb_G_1396206869486.jpg', 'images/201403/goods_img/79_G_1396206869062.jpg', 'images/201403/source_img/79_G_1396206869736.jpg', '1', '', '1', '1', '0', '0', '1396206869', '100', '0', '0', '0', '0', '0', '0', '1396206869', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('80', '15', 'dsd000080', '思高灵巧洁地擦促销装', '+', '0', '25', '', '0', '0.000', '82.80', '69.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/80_thumb_G_1396206917658.jpg', 'images/201403/goods_img/80_G_1396206917923.jpg', 'images/201403/source_img/80_G_1396206917983.jpg', '1', '', '1', '1', '0', '0', '1396206917', '100', '0', '0', '0', '0', '0', '0', '1396206917', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('81', '22', 'dsd000081', '飞利浦HD9220空气炸锅', '+', '0', '27', '', '0', '0.000', '2400.00', '2000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/81_thumb_G_1396206921241.jpg', 'images/201403/goods_img/81_G_1396206921023.jpg', 'images/201403/source_img/81_G_1396206921707.jpg', '1', '', '1', '1', '0', '0', '1396206921', '100', '0', '0', '0', '0', '0', '0', '1396206921', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('82', '22', 'dsd000082', '飞利浦HD9316电水壶', '+', '0', '27', '', '0', '0.000', '1200.00', '1000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/82_thumb_G_1396206948841.jpg', 'images/201403/goods_img/82_G_1396206948635.jpg', 'images/201403/source_img/82_G_1396206948602.jpg', '1', '', '1', '1', '0', '0', '1396206948', '100', '0', '0', '0', '0', '0', '0', '1396206948', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('83', '22', 'dsd000083', '飞利浦HD9312电水壶', '+', '0', '27', '', '0', '0.000', '360.00', '300.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/83_thumb_G_1396206969035.jpg', 'images/201403/goods_img/83_G_1396206969410.jpg', 'images/201403/source_img/83_G_1396206969292.jpg', '1', '', '1', '1', '0', '0', '1396206969', '100', '0', '0', '0', '0', '0', '0', '1396206969', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('84', '23', 'dsd000084', '茶花四组方便调味盒2527 [四格]', '+', '0', '0', '', '0', '0.000', '25.20', '21.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/84_thumb_G_1396207052467.jpg', 'images/201403/goods_img/84_G_1396207052791.jpg', 'images/201403/source_img/84_G_1396207052475.jpg', '1', '', '1', '1', '0', '0', '1396207052', '100', '0', '0', '0', '0', '0', '0', '1396207052', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('85', '23', 'dsd000085', '紫丁香调味缸套装JA300', '+', '0', '0', '', '0', '0.000', '28.79', '24.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/85_thumb_G_1396207068719.jpg', 'images/201403/goods_img/85_G_1396207068479.jpg', 'images/201403/source_img/85_G_1396207068522.jpg', '1', '', '1', '1', '0', '0', '1396207068', '100', '0', '0', '0', '0', '0', '0', '1396207068', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('86', '23', 'dsd000086', '优美家时尚3组调味盒KC-7008', '+', '0', '0', '', '0', '0.000', '36.00', '30.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/86_thumb_G_1396207095645.jpg', 'images/201403/goods_img/86_G_1396207095091.jpg', 'images/201403/source_img/86_G_1396207095580.jpg', '1', '', '1', '1', '0', '0', '1396207095', '100', '0', '0', '0', '0', '0', '0', '1396207095', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('87', '24', 'dsd000087', '华美小号妙奇油壶HM-9004', '+', '0', '0', '', '0', '0.000', '11.88', '9.90', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/87_thumb_G_1396207159322.jpg', 'images/201403/goods_img/87_G_1396207159721.jpg', 'images/201403/source_img/87_G_1396207159018.jpg', '1', '', '1', '1', '0', '0', '1396207159', '100', '0', '0', '0', '0', '0', '0', '1396207159', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('88', '24', 'dsd000088', '振兴圆型玻璃调味瓶YH5995', '+', '0', '0', '', '0', '0.000', '12.00', '10.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/88_thumb_G_1396207183644.jpg', 'images/201403/goods_img/88_G_1396207183556.jpg', 'images/201403/source_img/88_G_1396207183143.jpg', '1', '', '1', '1', '0', '0', '1396207183', '100', '0', '0', '0', '0', '0', '0', '1396207183', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('89', '24', 'dsd000089', '紫丁香优质酱醋瓶', '+', '0', '0', '', '0', '0.000', '24.00', '20.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/89_thumb_G_1396207224557.jpg', 'images/201403/goods_img/89_G_1396207224621.jpg', 'images/201403/source_img/89_G_1396207224130.jpg', '1', '', '1', '1', '0', '0', '1396207224', '100', '0', '0', '0', '0', '0', '0', '1396207224', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('91', '48', 'dsd000091', '康师傅3+2饼干 375g [香草]', '+', '0', '28', '', '0', '0.000', '13.79', '11.50', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/91_thumb_G_1396207676009.jpg', 'images/201403/goods_img/91_G_1396207676357.jpg', 'images/201403/source_img/91_G_1396207676058.jpg', '1', '', '1', '1', '0', '0', '1396207676', '100', '0', '0', '0', '0', '0', '0', '1396207676', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('92', '45', 'dsd000092', '戒指', '+', '0', '0', '', '0', '0.000', '2200.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/92_thumb_G_1396207677407.jpg', 'images/201403/goods_img/92_G_1396207677006.jpg', 'images/201403/source_img/92_G_1396207677865.jpg', '1', '', '1', '1', '0', '0', '1396207677', '100', '0', '0', '0', '0', '0', '0', '1396207677', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('93', '46', 'dsd000093', '项链', '+', '0', '0', '', '0', '0.000', '6000.00', '5000.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/93_thumb_G_1396207699660.jpg', 'images/201403/goods_img/93_G_1396207699581.jpg', 'images/201403/source_img/93_G_1396207699689.jpg', '1', '', '1', '1', '0', '0', '1396207699', '100', '0', '0', '0', '0', '0', '0', '1396207699', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('94', '45', 'dsd000094', '戒指', '+', '0', '0', '', '0', '0.000', '1800.00', '1500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/94_thumb_G_1396207733790.jpg', 'images/201403/goods_img/94_G_1396207733954.jpg', 'images/201403/source_img/94_G_1396207733771.jpg', '1', '', '1', '1', '0', '0', '1396207733', '100', '0', '0', '0', '0', '0', '0', '1396207733', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('95', '48', 'dsd000095', '康师傅3+2饼干 375g [奶油] ', '+', '0', '28', '', '0', '0.000', '12.71', '10.60', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/95_thumb_G_1396207735342.jpg', 'images/201403/goods_img/95_G_1396207735075.jpg', 'images/201403/source_img/95_G_1396207735665.jpg', '1', '', '1', '1', '0', '0', '1396207735', '100', '0', '0', '0', '0', '0', '0', '1396207735', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('96', '57', 'dsd000096', '耳饰', '+', '0', '0', '', '0', '0.000', '1560.00', '1300.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/96_thumb_G_1396207764125.jpg', 'images/201403/goods_img/96_G_1396207764222.jpg', 'images/201403/source_img/96_G_1396207764781.jpg', '1', '', '1', '1', '0', '0', '1396207764', '100', '0', '0', '0', '0', '0', '0', '1396209851', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('97', '48', 'dsd000097', '康师傅3+2饼干 375g [柠檬] ', '+', '0', '28', '', '0', '0.000', '12.71', '10.60', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/97_thumb_G_1396207799629.jpg', 'images/201403/goods_img/97_G_1396207799802.jpg', 'images/201403/source_img/97_G_1396207799464.jpg', '1', '', '1', '1', '0', '0', '1396207799', '100', '0', '0', '0', '0', '0', '0', '1396207799', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('98', '48', 'dsd000098', '391g奥利奥双心脆威化 [草莓+巧克力]', '+', '0', '0', '', '0', '0.000', '25.20', '21.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/98_thumb_G_1396207865779.jpg', 'images/201403/goods_img/98_G_1396207865875.jpg', 'images/201403/source_img/98_G_1396207865395.jpg', '1', '', '1', '1', '0', '0', '1396207865', '100', '0', '0', '0', '0', '0', '0', '1396207865', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('99', '52', 'dsd000099', '拉杆箱', '+', '0', '0', '', '0', '0.000', '180.00', '150.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/99_thumb_G_1396207969985.jpg', 'images/201403/goods_img/99_G_1396207969488.jpg', 'images/201403/source_img/99_G_1396207969616.jpg', '1', '', '1', '1', '0', '0', '1396207969', '100', '0', '0', '0', '0', '0', '0', '1396208027', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('100', '51', 'dsd000100', '72g农心辛拉面香菇牛肉面(杯)', '+', '0', '29', '', '0', '0.000', '5.04', '4.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/100_thumb_G_1396208052241.jpg', 'images/201403/goods_img/100_G_1396208052813.jpg', 'images/201403/source_img/100_G_1396208052529.jpg', '1', '', '1', '1', '0', '0', '1396208052', '100', '0', '0', '0', '0', '0', '0', '1396208052', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('101', '52', 'dsd000101', '拉杆箱', '+', '0', '0', '', '0', '0.000', '360.00', '300.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/101_thumb_G_1396208078325.jpg', 'images/201403/goods_img/101_G_1396208078005.jpg', 'images/201403/source_img/101_G_1396208078259.jpg', '1', '', '1', '1', '0', '0', '1396208078', '100', '0', '0', '0', '0', '0', '0', '1396208078', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('102', '52', 'dsd000102', '拉杆箱', '+', '0', '0', '', '0', '0.000', '600.00', '500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/102_thumb_G_1396208093485.jpg', 'images/201403/goods_img/102_G_1396208093091.jpg', 'images/201403/source_img/102_G_1396208093840.jpg', '1', '', '1', '1', '0', '0', '1396208093', '100', '0', '0', '0', '0', '0', '0', '1396208093', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('103', '51', 'dsd000103', '117g农心辣白菜辛拉面（桶面） ', '+', '0', '29', '', '0', '0.000', '7.43', '6.20', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/103_thumb_G_1396208096966.jpg', 'images/201403/goods_img/103_G_1396208096778.jpg', 'images/201403/source_img/103_G_1396208096339.jpg', '1', '', '1', '1', '0', '0', '1396208096', '100', '0', '0', '0', '0', '0', '0', '1396208096', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('104', '52', 'dsd000104', '拉杆箱', '+', '0', '0', '', '0', '0.000', '240.00', '200.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/104_thumb_G_1396208107449.jpg', 'images/201403/goods_img/104_G_1396208107349.jpg', 'images/201403/source_img/104_G_1396208107918.jpg', '1', '', '1', '1', '0', '0', '1396208107', '100', '0', '0', '0', '0', '0', '0', '1396208107', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('105', '53', 'dsd000105', '旅行包', '+', '0', '0', '', '0', '0.000', '144.00', '120.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/105_thumb_G_1396208151627.jpg', 'images/201403/goods_img/105_G_1396208151976.jpg', 'images/201403/source_img/105_G_1396208151826.jpg', '1', '', '1', '1', '0', '0', '1396208151', '100', '0', '0', '0', '0', '0', '0', '1396208151', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('106', '51', 'dsd000106', '70g农心上海汤面（鸡肉面）', '+', '0', '29', '', '0', '0.000', '5.04', '4.20', '3.90', '1396166400', '1397980800', '0', '', '', '', 'images/201403/thumb_img/106_thumb_G_1396208166012.jpg', 'images/201403/goods_img/106_G_1396208166461.jpg', 'images/201403/source_img/106_G_1396208166600.jpg', '1', '', '1', '1', '0', '0', '1396208166', '100', '0', '0', '0', '0', '1', '0', '1396209506', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('107', '53', 'dsd000107', '旅行包', '+', '0', '0', '', '0', '0.000', '600.00', '500.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/107_thumb_G_1396208223183.jpg', 'images/201403/goods_img/107_G_1396208223739.jpg', 'images/201403/source_img/107_G_1396208223233.jpg', '1', '', '1', '1', '0', '0', '1396208223', '100', '0', '0', '0', '0', '0', '0', '1396208223', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('108', '51', 'dsd000108', '120g*5农心辣白菜五连包 ', '+', '0', '29', '', '0', '0.000', '23.76', '19.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/108_thumb_G_1396208274652.jpg', 'images/201403/goods_img/108_G_1396208274387.jpg', 'images/201403/source_img/108_G_1396208274173.jpg', '1', '', '1', '1', '0', '0', '1396208227', '100', '0', '0', '0', '0', '0', '0', '1396208274', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('109', '53', 'dsd000109', '旅行包', '+', '0', '0', '', '0', '0.000', '312.00', '260.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/109_thumb_G_1396208282305.jpg', 'images/201403/goods_img/109_G_1396208282154.jpg', 'images/201403/source_img/109_G_1396208282051.jpg', '1', '', '1', '1', '0', '0', '1396208282', '100', '0', '0', '0', '0', '0', '0', '1396208282', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('110', '51', 'dsd000110', '120g*5农心乌龙面', '+', '0', '29', '', '0', '0.000', '24.96', '20.80', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/110_thumb_G_1396208361120.jpg', 'images/201403/goods_img/110_G_1396208361392.jpg', 'images/201403/source_img/110_G_1396208361321.jpg', '1', '', '1', '1', '0', '0', '1396208361', '100', '0', '0', '0', '0', '0', '0', '1396208361', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('111', '55', 'dsd000111', '240g好时黑巧克力家庭装 ', '+', '0', '30', '', '0', '0.000', '48.00', '40.00', '38.00', '1396166400', '1398326400', '0', '', '', '', 'images/201403/thumb_img/111_thumb_G_1396208495463.jpg', 'images/201403/goods_img/111_G_1396208495740.jpg', 'images/201403/source_img/111_G_1396208495515.jpg', '1', '', '1', '1', '0', '0', '1396208495', '100', '0', '0', '0', '0', '1', '0', '1396209483', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('112', '55', 'dsd000112', '240g好时曲奇奶香白巧克力 ', '+', '0', '30', '', '0', '0.000', '48.00', '40.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/112_thumb_G_1396208545474.jpg', 'images/201403/goods_img/112_G_1396208545572.jpg', 'images/201403/source_img/112_G_1396208545968.jpg', '1', '', '1', '1', '0', '0', '1396208545', '100', '0', '0', '0', '0', '0', '0', '1396208545', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('113', '27', 'dsd000113', '金莱克', '+', '0', '33', '', '0', '0.000', '456.00', '380.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/113_thumb_G_1396208551628.jpg', 'images/201403/goods_img/113_G_1396208551078.jpg', 'images/201403/source_img/113_G_1396208551563.jpg', '1', '', '1', '1', '0', '0', '1396208551', '100', '0', '1', '0', '0', '0', '0', '1396209367', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('114', '27', 'dsd000114', '李宁', '+', '0', '31', '', '0', '0.000', '540.00', '450.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/114_thumb_G_1396208578955.jpg', 'images/201403/goods_img/114_G_1396208578144.jpg', 'images/201403/source_img/114_G_1396208578265.jpg', '1', '', '1', '1', '0', '0', '1396208578', '100', '0', '0', '0', '1', '0', '0', '1396209366', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('115', '55', 'dsd000115', '100g好时精选巧克力礼盒(牛奶巧克力) ', '+', '0', '30', '', '0', '0.000', '48.00', '40.00', '38.00', '1396166400', '1397203200', '0', '', '', '', 'images/201403/thumb_img/115_thumb_G_1396208593275.jpg', 'images/201403/goods_img/115_G_1396208593096.jpg', 'images/201403/source_img/115_G_1396208593736.jpg', '1', '', '1', '1', '0', '0', '1396208593', '100', '0', '0', '1', '0', '1', '0', '1396209465', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('116', '27', 'dsd000116', '耐克', '+', '0', '31', '', '0', '0.000', '432.00', '360.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/116_thumb_G_1396208602103.jpg', 'images/201403/goods_img/116_G_1396208602526.jpg', 'images/201403/source_img/116_G_1396208602731.jpg', '1', '', '1', '1', '0', '0', '1396208602', '100', '0', '1', '0', '0', '0', '0', '1396209365', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('117', '27', 'dsd000117', '运动鞋', '+', '0', '0', '', '0', '0.000', '150.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/117_thumb_G_1396208633212.jpg', 'images/201403/goods_img/117_G_1396208633532.jpg', 'images/201403/source_img/117_G_1396208633544.jpg', '1', '', '1', '1', '0', '0', '1396208633', '100', '0', '0', '1', '0', '0', '0', '1396209364', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('118', '55', 'dsd000118', '216g德芙脆香米（碗装） ', '+', '0', '34', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/118_thumb_G_1396208651139.jpg', 'images/201403/goods_img/118_G_1396208651177.jpg', 'images/201403/source_img/118_G_1396208651210.jpg', '1', '', '1', '1', '0', '0', '1396208651', '100', '0', '0', '0', '1', '0', '0', '1396209364', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('119', '55', 'dsd000119', '  135g德芙m&ms逗趣礼盒 [花生] ', '+', '0', '34', '', '0', '0.000', '45.60', '38.00', '35.00', '1396166400', '1397462400', '0', '', '', '', 'images/201403/thumb_img/119_thumb_G_1396208697963.jpg', 'images/201403/goods_img/119_G_1396208697487.jpg', 'images/201403/source_img/119_G_1396208697635.jpg', '1', '', '1', '1', '0', '0', '1396208697', '100', '0', '1', '0', '0', '1', '0', '1396209424', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('120', '56', 'dsd000120', '200g雨润肉枣 餐桌特色食品 腊味小香肠 腊枣 ', '+', '0', '34', '', '0', '0.000', '32.40', '27.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/120_thumb_G_1396208789802.jpg', 'images/201403/goods_img/120_G_1396208789153.jpg', 'images/201403/source_img/120_G_1396208789686.jpg', '1', '', '1', '1', '0', '0', '1396208789', '100', '0', '0', '1', '0', '0', '0', '1396209363', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('121', '29', 'dsd000121', '户外鞋', '+', '0', '0', '', '0', '0.000', '312.00', '260.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/121_thumb_G_1396208953228.jpg', 'images/201403/goods_img/121_G_1396208953811.jpg', 'images/201403/source_img/121_G_1396208953935.jpg', '1', '', '1', '1', '0', '0', '1396208953', '100', '0', '0', '0', '1', '0', '0', '1396209362', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('122', '29', 'dsd000122', '冲锋衣', '+', '0', '0', '', '0', '0.000', '432.00', '360.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/122_thumb_G_1396208973477.jpg', 'images/201403/goods_img/122_G_1396208973987.jpg', 'images/201403/source_img/122_G_1396208973090.jpg', '1', '', '1', '1', '0', '0', '1396208973', '100', '0', '0', '1', '0', '0', '0', '1396209361', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('123', '29', 'dsd000123', '木林森户外鞋', '+', '0', '36', '', '0', '0.000', '540.00', '450.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/123_thumb_G_1396209007293.jpg', 'images/201403/goods_img/123_G_1396209007256.jpg', 'images/201403/source_img/123_G_1396209007325.jpg', '1', '', '1', '1', '0', '0', '1396209007', '100', '0', '1', '0', '0', '0', '0', '1396209361', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('124', '29', 'dsd000124', '防水户外服装', '+', '0', '0', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/124_thumb_G_1396209072261.jpg', 'images/201403/goods_img/124_G_1396209072259.jpg', 'images/201403/source_img/124_G_1396209072349.jpg', '1', '', '1', '1', '0', '0', '1396209072', '100', '0', '0', '1', '0', '0', '0', '1396209360', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('125', '28', 'dsd000125', '运动服', '+', '0', '0', '', '0', '0.000', '220.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/125_thumb_G_1396209311682.jpg', 'images/201403/goods_img/125_G_1396209311147.jpg', 'images/201403/source_img/125_G_1396209311061.jpg', '1', '', '1', '1', '0', '0', '1396209311', '100', '0', '0', '0', '1', '0', '0', '1396209359', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('126', '28', 'dsd000126', '运动服', '+', '0', '0', '', '0', '0.000', '360.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/126_thumb_G_1396209328116.jpg', 'images/201403/goods_img/126_G_1396209328330.jpg', 'images/201403/source_img/126_G_1396209328800.jpg', '1', '', '1', '1', '0', '0', '1396209328', '100', '0', '0', '1', '0', '0', '0', '1396209359', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('127', '28', 'dsd000127', '运动服', '+', '0', '0', '', '0', '0.000', '400.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/127_thumb_G_1396209343614.jpg', 'images/201403/goods_img/127_G_1396209343149.jpg', 'images/201403/source_img/127_G_1396209343668.jpg', '1', '', '1', '1', '0', '0', '1396209343', '100', '0', '1', '0', '0', '0', '0', '1396209358', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('128', '28', 'dsd000128', '运动包', '+', '0', '37', '', '0', '0.000', '576.00', '480.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/128_thumb_G_1396209400408.jpg', 'images/201403/goods_img/128_G_1396209400233.jpg', 'images/201403/source_img/128_G_1396209400463.jpg', '1', '', '1', '1', '0', '0', '1396209400', '100', '0', '0', '0', '0', '0', '0', '1396209400', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('129', '28', 'dsd000129', '运动包', '+', '0', '37', '', '0', '0.000', '504.00', '420.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/129_thumb_G_1396209416830.jpg', 'images/201403/goods_img/129_G_1396209416970.jpg', 'images/201403/source_img/129_G_1396209416710.jpg', '1', '', '1', '1', '0', '0', '1396209416', '100', '0', '0', '0', '0', '0', '0', '1396209416', '0', '', '-1', '-1', '0', null);
+INSERT INTO `dsd_goods` VALUES ('130', '28', 'dsd000130', '运动包', '+', '0', '0', '', '0', '0.000', '144.00', '120.00', '0.00', '0', '0', '0', '', '', '', 'images/201403/thumb_img/130_thumb_G_1396209456972.jpg', 'images/201403/goods_img/130_G_1396209456191.jpg', 'images/201403/source_img/130_G_1396209456778.jpg', '1', '', '1', '1', '0', '0', '1396209456', '100', '0', '0', '0', '0', '0', '0', '1396209456', '0', '', '-1', '-1', '0', null);
 
 -- ----------------------------
 -- Table structure for `dsd_goods_activity`
@@ -1236,12 +1624,139 @@ CREATE TABLE `dsd_goods_gallery` (
   `img_original` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`img_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dsd_goods_gallery
 -- ----------------------------
 INSERT INTO `dsd_goods_gallery` VALUES ('1', '1', 'images/201403/goods_img/1_P_1396121018063.jpg', '', 'images/201403/thumb_img/1_thumb_P_1396121018467.jpg', 'images/201403/source_img/1_P_1396121017725.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('2', '2', 'images/201403/goods_img/2_P_1396204122054.jpg', '', 'images/201403/thumb_img/2_thumb_P_1396204122611.jpg', 'images/201403/source_img/2_P_1396204122191.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('3', '3', 'images/201403/goods_img/3_P_1396204245856.jpg', '', 'images/201403/thumb_img/3_thumb_P_1396204245229.jpg', 'images/201403/source_img/3_P_1396204245943.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('4', '4', 'images/201403/goods_img/4_P_1396204288551.jpg', '', 'images/201403/thumb_img/4_thumb_P_1396204288917.jpg', 'images/201403/source_img/4_P_1396204288501.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('5', '5', 'images/201403/goods_img/5_P_1396204317287.jpg', '', 'images/201403/thumb_img/5_thumb_P_1396204317545.jpg', 'images/201403/source_img/5_P_1396204317556.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('6', '6', 'images/201403/goods_img/6_P_1396204438477.jpg', '', 'images/201403/thumb_img/6_thumb_P_1396204438995.jpg', 'images/201403/source_img/6_P_1396204438501.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('7', '7', 'images/201403/goods_img/7_P_1396204465076.jpg', '', 'images/201403/thumb_img/7_thumb_P_1396204465386.jpg', 'images/201403/source_img/7_P_1396204465482.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('8', '8', 'images/201403/goods_img/8_P_1396204527734.jpg', '', 'images/201403/thumb_img/8_thumb_P_1396204527181.jpg', 'images/201403/source_img/8_P_1396204527849.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('9', '10', 'images/201403/goods_img/10_P_1396204648694.jpg', '', 'images/201403/thumb_img/10_thumb_P_1396204648435.jpg', 'images/201403/source_img/10_P_1396204648249.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('10', '11', 'images/201403/goods_img/11_P_1396204672506.jpg', '', 'images/201403/thumb_img/11_thumb_P_1396204672329.jpg', 'images/201403/source_img/11_P_1396204672164.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('11', '12', 'images/201403/goods_img/12_P_1396204747921.jpg', '', 'images/201403/thumb_img/12_thumb_P_1396204747570.jpg', 'images/201403/source_img/12_P_1396204747828.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('12', '14', 'images/201403/goods_img/14_P_1396204872566.jpg', '', 'images/201403/thumb_img/14_thumb_P_1396204872716.jpg', 'images/201403/source_img/14_P_1396204872530.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('13', '15', 'images/201403/goods_img/15_P_1396205038624.jpg', '', 'images/201403/thumb_img/15_thumb_P_1396205038592.jpg', 'images/201403/source_img/15_P_1396205038190.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('14', '18', 'images/201403/goods_img/18_P_1396205074683.jpg', '', 'images/201403/thumb_img/18_thumb_P_1396205074738.jpg', 'images/201403/source_img/18_P_1396205074229.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('15', '19', 'images/201403/goods_img/19_P_1396205102619.jpg', '', 'images/201403/thumb_img/19_thumb_P_1396205102996.jpg', 'images/201403/source_img/19_P_1396205102348.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('16', '20', 'images/201403/goods_img/20_P_1396205119759.jpg', '', 'images/201403/thumb_img/20_thumb_P_1396205119019.jpg', 'images/201403/source_img/20_P_1396205119408.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('17', '21', 'images/201403/goods_img/21_P_1396205164983.jpg', '', 'images/201403/thumb_img/21_thumb_P_1396205164749.jpg', 'images/201403/source_img/21_P_1396205163149.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('18', '22', 'images/201403/goods_img/22_P_1396205180920.jpg', '', 'images/201403/thumb_img/22_thumb_P_1396205180636.jpg', 'images/201403/source_img/22_P_1396205180090.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('19', '23', 'images/201403/goods_img/23_P_1396205195158.jpg', '', 'images/201403/thumb_img/23_thumb_P_1396205195251.jpg', 'images/201403/source_img/23_P_1396205195550.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('20', '24', 'images/201403/goods_img/24_P_1396205200566.jpg', '', 'images/201403/thumb_img/24_thumb_P_1396205200882.jpg', 'images/201403/source_img/24_P_1396205200513.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('21', '25', 'images/201403/goods_img/25_P_1396205265041.jpg', '', 'images/201403/thumb_img/25_thumb_P_1396205265532.jpg', 'images/201403/source_img/25_P_1396205265391.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('22', '26', 'images/201403/goods_img/26_P_1396205298396.jpg', '', 'images/201403/thumb_img/26_thumb_P_1396205298790.jpg', 'images/201403/source_img/26_P_1396205298593.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('23', '27', 'images/201403/goods_img/27_P_1396205377526.jpg', '', 'images/201403/thumb_img/27_thumb_P_1396205377308.jpg', 'images/201403/source_img/27_P_1396205377715.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('24', '28', 'images/201403/goods_img/28_P_1396205438469.jpg', '', 'images/201403/thumb_img/28_thumb_P_1396205438861.jpg', 'images/201403/source_img/28_P_1396205438605.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('25', '29', 'images/201403/goods_img/29_P_1396205481182.jpg', '', 'images/201403/thumb_img/29_thumb_P_1396205481139.jpg', 'images/201403/source_img/29_P_1396205480913.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('26', '30', 'images/201403/goods_img/30_P_1396205580357.jpg', '', 'images/201403/thumb_img/30_thumb_P_1396205580048.jpg', 'images/201403/source_img/30_P_1396205580385.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('27', '31', 'images/201403/goods_img/31_P_1396205655913.jpg', '', 'images/201403/thumb_img/31_thumb_P_1396205655814.jpg', 'images/201403/source_img/31_P_1396205655626.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('28', '32', 'images/201403/goods_img/32_P_1396205672313.jpg', '', 'images/201403/thumb_img/32_thumb_P_1396205672499.jpg', 'images/201403/source_img/32_P_1396205672930.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('29', '33', 'images/201403/goods_img/33_P_1396205688942.jpg', '', 'images/201403/thumb_img/33_thumb_P_1396205688719.jpg', 'images/201403/source_img/33_P_1396205688352.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('30', '34', 'images/201403/goods_img/34_P_1396205748074.jpg', '', 'images/201403/thumb_img/34_thumb_P_1396205748340.jpg', 'images/201403/source_img/34_P_1396205748598.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('31', '35', 'images/201403/goods_img/35_P_1396205778019.jpg', '', 'images/201403/thumb_img/35_thumb_P_1396205778096.jpg', 'images/201403/source_img/35_P_1396205777749.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('32', '34', 'images/201403/goods_img/34_P_1396205793807.jpg', '', 'images/201403/thumb_img/34_thumb_P_1396205793357.jpg', 'images/201403/source_img/34_P_1396205793941.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('33', '36', 'images/201403/goods_img/36_P_1396205803053.jpg', '', 'images/201403/thumb_img/36_thumb_P_1396205803701.jpg', 'images/201403/source_img/36_P_1396205803897.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('34', '37', 'images/201403/goods_img/37_P_1396205822651.jpg', '', 'images/201403/thumb_img/37_thumb_P_1396205822227.jpg', 'images/201403/source_img/37_P_1396205822423.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('35', '38', 'images/201403/goods_img/38_P_1396205869625.jpg', '', 'images/201403/thumb_img/38_thumb_P_1396205869465.jpg', 'images/201403/source_img/38_P_1396205869242.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('36', '39', 'images/201403/goods_img/39_P_1396205872787.jpg', '', 'images/201403/thumb_img/39_thumb_P_1396205872563.jpg', 'images/201403/source_img/39_P_1396205872296.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('37', '40', 'images/201403/goods_img/40_P_1396205898082.jpg', '', 'images/201403/thumb_img/40_thumb_P_1396205898463.jpg', 'images/201403/source_img/40_P_1396205897861.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('38', '41', 'images/201403/goods_img/41_P_1396205932213.jpg', '', 'images/201403/thumb_img/41_thumb_P_1396205932406.jpg', 'images/201403/source_img/41_P_1396205932819.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('39', '42', 'images/201403/goods_img/42_P_1396205961163.jpg', '', 'images/201403/thumb_img/42_thumb_P_1396205961796.jpg', 'images/201403/source_img/42_P_1396205961910.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('40', '43', 'images/201403/goods_img/43_P_1396205985606.jpg', '', 'images/201403/thumb_img/43_thumb_P_1396205985185.jpg', 'images/201403/source_img/43_P_1396205985847.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('41', '44', 'images/201403/goods_img/44_P_1396205999264.jpg', '', 'images/201403/thumb_img/44_thumb_P_1396205999046.jpg', 'images/201403/source_img/44_P_1396205999131.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('42', '45', 'images/201403/goods_img/45_P_1396206040094.jpg', '', 'images/201403/thumb_img/45_thumb_P_1396206040245.jpg', 'images/201403/source_img/45_P_1396206040249.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('43', '46', 'images/201403/goods_img/46_P_1396206132261.jpg', '', 'images/201403/thumb_img/46_thumb_P_1396206132436.jpg', 'images/201403/source_img/46_P_1396206132716.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('44', '47', 'images/201403/goods_img/47_P_1396206139393.jpg', '', 'images/201403/thumb_img/47_thumb_P_1396206139050.jpg', 'images/201403/source_img/47_P_1396206139260.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('45', '48', 'images/201403/goods_img/48_P_1396206170901.jpg', '', 'images/201403/thumb_img/48_thumb_P_1396206170680.jpg', 'images/201403/source_img/48_P_1396206170806.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('46', '49', 'images/201403/goods_img/49_P_1396206194708.jpg', '', 'images/201403/thumb_img/49_thumb_P_1396206194316.jpg', 'images/201403/source_img/49_P_1396206194422.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('47', '50', 'images/201403/goods_img/50_P_1396206202916.jpg', '', 'images/201403/thumb_img/50_thumb_P_1396206202104.jpg', 'images/201403/source_img/50_P_1396206202135.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('48', '51', 'images/201403/goods_img/51_P_1396206204908.jpg', '', 'images/201403/thumb_img/51_thumb_P_1396206204277.jpg', 'images/201403/source_img/51_P_1396206204488.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('49', '52', 'images/201403/goods_img/52_P_1396206218450.jpg', '', 'images/201403/thumb_img/52_thumb_P_1396206218812.jpg', 'images/201403/source_img/52_P_1396206218942.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('50', '53', 'images/201403/goods_img/53_P_1396206244813.jpg', '', 'images/201403/thumb_img/53_thumb_P_1396206244512.jpg', 'images/201403/source_img/53_P_1396206244316.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('51', '54', 'images/201403/goods_img/54_P_1396206266789.jpg', '', 'images/201403/thumb_img/54_thumb_P_1396206266003.jpg', 'images/201403/source_img/54_P_1396206266103.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('52', '55', 'images/201403/goods_img/55_P_1396206268409.jpg', '', 'images/201403/thumb_img/55_thumb_P_1396206268351.jpg', 'images/201403/source_img/55_P_1396206268651.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('53', '56', 'images/201403/goods_img/56_P_1396206294883.jpg', '', 'images/201403/thumb_img/56_thumb_P_1396206294834.jpg', 'images/201403/source_img/56_P_1396206294893.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('54', '57', 'images/201403/goods_img/57_P_1396206295143.jpg', '', 'images/201403/thumb_img/57_thumb_P_1396206295586.jpg', 'images/201403/source_img/57_P_1396206295478.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('55', '58', 'images/201403/goods_img/58_P_1396206316105.jpg', '', 'images/201403/thumb_img/58_thumb_P_1396206316249.jpg', 'images/201403/source_img/58_P_1396206316103.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('56', '59', 'images/201403/goods_img/59_P_1396206345371.jpg', '', 'images/201403/thumb_img/59_thumb_P_1396206345034.jpg', 'images/201403/source_img/59_P_1396206345156.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('57', '60', 'images/201403/goods_img/60_P_1396206368775.jpg', '', 'images/201403/thumb_img/60_thumb_P_1396206368789.jpg', 'images/201403/source_img/60_P_1396206368984.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('58', '61', 'images/201403/goods_img/61_P_1396206372618.jpg', '', 'images/201403/thumb_img/61_thumb_P_1396206372913.jpg', 'images/201403/source_img/61_P_1396206372228.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('59', '62', 'images/201403/goods_img/62_P_1396206406546.jpg', '', 'images/201403/thumb_img/62_thumb_P_1396206406382.jpg', 'images/201403/source_img/62_P_1396206406104.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('60', '63', 'images/201403/goods_img/63_P_1396206441577.jpg', '', 'images/201403/thumb_img/63_thumb_P_1396206441260.jpg', 'images/201403/source_img/63_P_1396206441344.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('61', '64', 'images/201403/goods_img/64_P_1396206453297.jpg', '', 'images/201403/thumb_img/64_thumb_P_1396206453814.jpg', 'images/201403/source_img/64_P_1396206453711.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('62', '65', 'images/201403/goods_img/65_P_1396206479921.jpg', '', 'images/201403/thumb_img/65_thumb_P_1396206479181.jpg', 'images/201403/source_img/65_P_1396206479628.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('63', '66', 'images/201403/goods_img/66_P_1396206501631.jpg', '', 'images/201403/thumb_img/66_thumb_P_1396206501522.jpg', 'images/201403/source_img/66_P_1396206501235.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('64', '67', 'images/201403/goods_img/67_P_1396206597794.jpg', '', 'images/201403/thumb_img/67_thumb_P_1396206597617.jpg', 'images/201403/source_img/67_P_1396206596150.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('65', '68', 'images/201403/goods_img/68_P_1396206603540.jpg', '', 'images/201403/thumb_img/68_thumb_P_1396206603475.jpg', 'images/201403/source_img/68_P_1396206603659.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('66', '69', 'images/201403/goods_img/69_P_1396206621165.jpg', '', 'images/201403/thumb_img/69_thumb_P_1396206621638.jpg', 'images/201403/source_img/69_P_1396206621199.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('67', '70', 'images/201403/goods_img/70_P_1396206642726.jpg', '', 'images/201403/thumb_img/70_thumb_P_1396206642673.jpg', 'images/201403/source_img/70_P_1396206642038.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('68', '71', 'images/201403/goods_img/71_P_1396206676687.jpg', '', 'images/201403/thumb_img/71_thumb_P_1396206676388.jpg', 'images/201403/source_img/71_P_1396206676262.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('69', '72', 'images/201403/goods_img/72_P_1396206691078.jpg', '', 'images/201403/thumb_img/72_thumb_P_1396206691128.jpg', 'images/201403/source_img/72_P_1396206691171.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('70', '73', 'images/201403/goods_img/73_P_1396206710710.jpg', '', 'images/201403/thumb_img/73_thumb_P_1396206710698.jpg', 'images/201403/source_img/73_P_1396206710396.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('71', '74', 'images/201403/goods_img/74_P_1396206736276.jpg', '', 'images/201403/thumb_img/74_thumb_P_1396206736282.jpg', 'images/201403/source_img/74_P_1396206735676.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('72', '75', 'images/201403/goods_img/75_P_1396206777482.jpg', '', 'images/201403/thumb_img/75_thumb_P_1396206777990.jpg', 'images/201403/source_img/75_P_1396206776662.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('73', '76', 'images/201403/goods_img/76_P_1396206809742.jpg', '', 'images/201403/thumb_img/76_thumb_P_1396206809107.jpg', 'images/201403/source_img/76_P_1396206809801.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('74', '77', 'images/201403/goods_img/77_P_1396206831867.jpg', '', 'images/201403/thumb_img/77_thumb_P_1396206831497.jpg', 'images/201403/source_img/77_P_1396206831910.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('75', '78', 'images/201403/goods_img/78_P_1396206843798.jpg', '', 'images/201403/thumb_img/78_thumb_P_1396206843271.jpg', 'images/201403/source_img/78_P_1396206843981.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('76', '79', 'images/201403/goods_img/79_P_1396206870538.jpg', '', 'images/201403/thumb_img/79_thumb_P_1396206870355.jpg', 'images/201403/source_img/79_P_1396206869645.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('77', '80', 'images/201403/goods_img/80_P_1396206917900.jpg', '', 'images/201403/thumb_img/80_thumb_P_1396206917497.jpg', 'images/201403/source_img/80_P_1396206917747.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('78', '81', 'images/201403/goods_img/81_P_1396206921984.jpg', '', 'images/201403/thumb_img/81_thumb_P_1396206921516.jpg', 'images/201403/source_img/81_P_1396206921540.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('79', '82', 'images/201403/goods_img/82_P_1396206948811.jpg', '', 'images/201403/thumb_img/82_thumb_P_1396206948873.jpg', 'images/201403/source_img/82_P_1396206948023.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('80', '83', 'images/201403/goods_img/83_P_1396206969466.jpg', '', 'images/201403/thumb_img/83_thumb_P_1396206969427.jpg', 'images/201403/source_img/83_P_1396206969237.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('81', '84', 'images/201403/goods_img/84_P_1396207052798.jpg', '', 'images/201403/thumb_img/84_thumb_P_1396207052124.jpg', 'images/201403/source_img/84_P_1396207052813.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('82', '85', 'images/201403/goods_img/85_P_1396207068239.jpg', '', 'images/201403/thumb_img/85_thumb_P_1396207068310.jpg', 'images/201403/source_img/85_P_1396207068939.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('83', '86', 'images/201403/goods_img/86_P_1396207095070.jpg', '', 'images/201403/thumb_img/86_thumb_P_1396207095185.jpg', 'images/201403/source_img/86_P_1396207095544.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('84', '87', 'images/201403/goods_img/87_P_1396207159568.jpg', '', 'images/201403/thumb_img/87_thumb_P_1396207159588.jpg', 'images/201403/source_img/87_P_1396207159637.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('85', '88', 'images/201403/goods_img/88_P_1396207183541.jpg', '', 'images/201403/thumb_img/88_thumb_P_1396207183208.jpg', 'images/201403/source_img/88_P_1396207183072.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('86', '89', 'images/201403/goods_img/89_P_1396207224876.jpg', '', 'images/201403/thumb_img/89_thumb_P_1396207224055.jpg', 'images/201403/source_img/89_P_1396207224834.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('87', '90', 'images/201403/goods_img/90_P_1396207634463.jpg', '', 'images/201403/thumb_img/90_thumb_P_1396207634153.jpg', 'images/201403/source_img/90_P_1396207634569.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('88', '91', 'images/201403/goods_img/91_P_1396207676348.jpg', '', 'images/201403/thumb_img/91_thumb_P_1396207676180.jpg', 'images/201403/source_img/91_P_1396207676666.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('89', '92', 'images/201403/goods_img/92_P_1396207677534.jpg', '', 'images/201403/thumb_img/92_thumb_P_1396207677014.jpg', 'images/201403/source_img/92_P_1396207677118.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('90', '93', 'images/201403/goods_img/93_P_1396207700557.jpg', '', 'images/201403/thumb_img/93_thumb_P_1396207700451.jpg', 'images/201403/source_img/93_P_1396207699424.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('91', '94', 'images/201403/goods_img/94_P_1396207733580.jpg', '', 'images/201403/thumb_img/94_thumb_P_1396207733323.jpg', 'images/201403/source_img/94_P_1396207733870.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('92', '95', 'images/201403/goods_img/95_P_1396207736128.jpg', '', 'images/201403/thumb_img/95_thumb_P_1396207736047.jpg', 'images/201403/source_img/95_P_1396207735268.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('93', '96', 'images/201403/goods_img/96_P_1396207764167.jpg', '', 'images/201403/thumb_img/96_thumb_P_1396207764610.jpg', 'images/201403/source_img/96_P_1396207764745.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('94', '97', 'images/201403/goods_img/97_P_1396207799689.jpg', '', 'images/201403/thumb_img/97_thumb_P_1396207800439.jpg', 'images/201403/source_img/97_P_1396207799325.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('95', '98', 'images/201403/goods_img/98_P_1396207865594.jpg', '', 'images/201403/thumb_img/98_thumb_P_1396207865072.jpg', 'images/201403/source_img/98_P_1396207865221.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('96', '99', 'images/201403/goods_img/99_P_1396207970386.jpg', '', 'images/201403/thumb_img/99_thumb_P_1396207970830.jpg', 'images/201403/source_img/99_P_1396207969560.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('97', '100', 'images/201403/goods_img/100_P_1396208052887.jpg', '', 'images/201403/thumb_img/100_thumb_P_1396208052356.jpg', 'images/201403/source_img/100_P_1396208052863.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('98', '101', 'images/201403/goods_img/101_P_1396208078184.jpg', '', 'images/201403/thumb_img/101_thumb_P_1396208078336.jpg', 'images/201403/source_img/101_P_1396208078737.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('99', '102', 'images/201403/goods_img/102_P_1396208094663.jpg', '', 'images/201403/thumb_img/102_thumb_P_1396208094069.jpg', 'images/201403/source_img/102_P_1396208093150.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('100', '103', 'images/201403/goods_img/103_P_1396208096720.jpg', '', 'images/201403/thumb_img/103_thumb_P_1396208096328.jpg', 'images/201403/source_img/103_P_1396208096468.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('101', '104', 'images/201403/goods_img/104_P_1396208108126.jpg', '', 'images/201403/thumb_img/104_thumb_P_1396208108676.jpg', 'images/201403/source_img/104_P_1396208107007.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('102', '105', 'images/201403/goods_img/105_P_1396208151412.jpg', '', 'images/201403/thumb_img/105_thumb_P_1396208151836.jpg', 'images/201403/source_img/105_P_1396208151663.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('103', '106', 'images/201403/goods_img/106_P_1396208166087.jpg', '', 'images/201403/thumb_img/106_thumb_P_1396208166297.jpg', 'images/201403/source_img/106_P_1396208166940.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('104', '107', 'images/201403/goods_img/107_P_1396208223794.jpg', '', 'images/201403/thumb_img/107_thumb_P_1396208223949.jpg', 'images/201403/source_img/107_P_1396208223853.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('105', '108', 'images/201403/goods_img/108_P_1396208227808.jpg', '', 'images/201403/thumb_img/108_thumb_P_1396208227402.jpg', 'images/201403/source_img/108_P_1396208227182.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('106', '108', 'images/201403/goods_img/108_P_1396208274307.jpg', '', 'images/201403/thumb_img/108_thumb_P_1396208274116.jpg', 'images/201403/source_img/108_P_1396208274252.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('107', '109', 'images/201403/goods_img/109_P_1396208282557.jpg', '', 'images/201403/thumb_img/109_thumb_P_1396208282266.jpg', 'images/201403/source_img/109_P_1396208282150.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('108', '110', 'images/201403/goods_img/110_P_1396208362205.jpg', '', 'images/201403/thumb_img/110_thumb_P_1396208362923.jpg', 'images/201403/source_img/110_P_1396208361085.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('109', '111', 'images/201403/goods_img/111_P_1396208495850.jpg', '', 'images/201403/thumb_img/111_thumb_P_1396208495403.jpg', 'images/201403/source_img/111_P_1396208495432.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('110', '112', 'images/201403/goods_img/112_P_1396208545582.jpg', '', 'images/201403/thumb_img/112_thumb_P_1396208545194.jpg', 'images/201403/source_img/112_P_1396208545799.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('111', '113', 'images/201403/goods_img/113_P_1396208551213.jpg', '', 'images/201403/thumb_img/113_thumb_P_1396208551135.jpg', 'images/201403/source_img/113_P_1396208551251.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('112', '114', 'images/201403/goods_img/114_P_1396208578793.jpg', '', 'images/201403/thumb_img/114_thumb_P_1396208578085.jpg', 'images/201403/source_img/114_P_1396208578762.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('113', '115', 'images/201403/goods_img/115_P_1396208593312.jpg', '', 'images/201403/thumb_img/115_thumb_P_1396208593274.jpg', 'images/201403/source_img/115_P_1396208593224.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('114', '116', 'images/201403/goods_img/116_P_1396208602701.jpg', '', 'images/201403/thumb_img/116_thumb_P_1396208602544.jpg', 'images/201403/source_img/116_P_1396208602759.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('115', '117', 'images/201403/goods_img/117_P_1396208634773.jpg', '', 'images/201403/thumb_img/117_thumb_P_1396208634874.jpg', 'images/201403/source_img/117_P_1396208633441.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('116', '118', 'images/201403/goods_img/118_P_1396208651863.jpg', '', 'images/201403/thumb_img/118_thumb_P_1396208651119.jpg', 'images/201403/source_img/118_P_1396208651666.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('117', '119', 'images/201403/goods_img/119_P_1396208697020.jpg', '', 'images/201403/thumb_img/119_thumb_P_1396208697309.jpg', 'images/201403/source_img/119_P_1396208697458.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('118', '120', 'images/201403/goods_img/120_P_1396208789704.jpg', '', 'images/201403/thumb_img/120_thumb_P_1396208789875.jpg', 'images/201403/source_img/120_P_1396208789594.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('119', '121', 'images/201403/goods_img/121_P_1396208953139.jpg', '', 'images/201403/thumb_img/121_thumb_P_1396208953433.jpg', 'images/201403/source_img/121_P_1396208953545.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('120', '122', 'images/201403/goods_img/122_P_1396208973753.jpg', '', 'images/201403/thumb_img/122_thumb_P_1396208973859.jpg', 'images/201403/source_img/122_P_1396208973567.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('121', '123', 'images/201403/goods_img/123_P_1396209007295.jpg', '', 'images/201403/thumb_img/123_thumb_P_1396209007335.jpg', 'images/201403/source_img/123_P_1396209007193.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('122', '124', 'images/201403/goods_img/124_P_1396209072775.jpg', '', 'images/201403/thumb_img/124_thumb_P_1396209072148.jpg', 'images/201403/source_img/124_P_1396209072835.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('123', '125', 'images/201403/goods_img/125_P_1396209311660.jpg', '', 'images/201403/thumb_img/125_thumb_P_1396209311212.jpg', 'images/201403/source_img/125_P_1396209311471.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('124', '126', 'images/201403/goods_img/126_P_1396209329718.jpg', '', 'images/201403/thumb_img/126_thumb_P_1396209329852.jpg', 'images/201403/source_img/126_P_1396209328008.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('125', '127', 'images/201403/goods_img/127_P_1396209343784.jpg', '', 'images/201403/thumb_img/127_thumb_P_1396209343304.jpg', 'images/201403/source_img/127_P_1396209343328.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('126', '128', 'images/201403/goods_img/128_P_1396209401689.jpg', '', 'images/201403/thumb_img/128_thumb_P_1396209401329.jpg', 'images/201403/source_img/128_P_1396209400061.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('127', '129', 'images/201403/goods_img/129_P_1396209416253.jpg', '', 'images/201403/thumb_img/129_thumb_P_1396209416318.jpg', 'images/201403/source_img/129_P_1396209416856.jpg');
+INSERT INTO `dsd_goods_gallery` VALUES ('128', '130', 'images/201403/goods_img/130_P_1396209456900.jpg', '', 'images/201403/thumb_img/130_thumb_P_1396209456272.jpg', 'images/201403/source_img/130_P_1396209456468.jpg');
 
 -- ----------------------------
 -- Table structure for `dsd_goods_type`
@@ -5150,8 +5665,8 @@ CREATE TABLE `dsd_sessions` (
 -- ----------------------------
 -- Records of dsd_sessions
 -- ----------------------------
-INSERT INTO `dsd_sessions` VALUES ('cf5a7449cc8a052bea09426320bc428c', '1396172598', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
-INSERT INTO `dsd_sessions` VALUES ('d8b323bafdffe09211a703c366529b78', '1396172675', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1396143875;s:12:\"suppliers_id\";s:1:\"0\";}');
+INSERT INTO `dsd_sessions` VALUES ('82062a0c4cf4ee9d4191d294e2a3e4d3', '1396244190', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1396215390;s:12:\"suppliers_id\";s:1:\"0\";}');
+INSERT INTO `dsd_sessions` VALUES ('8d5076ed4b45f44fa06a4b0053399190', '1396244084', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
 
 -- ----------------------------
 -- Table structure for `dsd_sessions_data`
@@ -5533,13 +6048,17 @@ INSERT INTO `dsd_template` VALUES ('category', '左边区域', '/library/price_g
 INSERT INTO `dsd_template` VALUES ('category', '左边区域', '/library/filter_attr.lbi', '2', '0', '0', '0', 'default', '');
 INSERT INTO `dsd_template` VALUES ('index', 'banner右侧区域', '/library/ad_position.lbi', '1', '1', '1', '4', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', 'banner右侧区域', '/library/cat_articles.lbi', '0', '4', '6', '3', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '5', '5', '3', '1', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '4', '4', '3', '1', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '3', '3', '3', '1', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '2', '2', '3', '1', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '1', '1', '3', '1', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '', '/library/brands.lbi', '0', '0', '3', '0', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/brands.lbi', '0', '0', '3', '0', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `dsd_template` VALUES ('index', '', '/library/recommend_new.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '全宽行', '/library/recommend_promotion.lbi', '0', '0', '5', '0', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', 'banner下方区域', '/library/recommend_hot.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `dsd_template` VALUES ('index', '', '/library/recommend_new.lbi', '0', '0', '3', '0', 'red_three', '');
 INSERT INTO `dsd_template` VALUES ('index', '', '/library/recommend_best.lbi', '0', '0', '3', '0', 'red_three', '');
 
 -- ----------------------------
