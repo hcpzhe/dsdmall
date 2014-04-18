@@ -4,12 +4,15 @@ $db_host   = "localhost:3306";
 
 // database name
 $db_name   = "dsdmall.com";
+//$db_name   = "dsdmall_com";
 
 // database username
 $db_user   = "root";
+//$db_user   = "dsdmall_com";
 
 // database password
 $db_pass   = "root";
+//$db_pass   = "MWNwYmN1QTNmJmY";
 
 // table prefix
 $prefix    = "dsd_";
