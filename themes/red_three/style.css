@@ -2017,22 +2017,8 @@ opacity: 0.7;
 		.rs_ig_r .rs_jq_gl_3 {border-bottom: #2463B3 2px solid;} /**3楼**/
 		.rs_ig_r .rs_jq_gl_4 {border-bottom: #8CB91E 2px solid;} /**4楼**/
 		.rs_ig_r .rs_jq_gl_5 {border-bottom: #1193C5 2px solid;} /**5楼**/
-		
 		.rs_ig_r_list {width: 243px; border: #ddd 1px solid; border-top:none; height: 268px; border-collapse: collapse;}
 		.rs_ig_r_brand {height: 190px;width: 243px; border: #ddd 1px solid;border-collapse: collapse;border-top:none;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#footer {position: relative;}
+	#rs_tmp_footer {position: absolute;right:0;}
