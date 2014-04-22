@@ -63,31 +63,62 @@
 <!-- TemplateEndEditable -->
 		</div>
 		
-		<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->
-		
-		<div class="rs_l_art_box">
-			<div class="rs_left_art_head">
-			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
-				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
-			<!--{/foreach}-->
-			</div>
-			<div class="rs_left_box_list rs_l_art_list">
-			<!--{foreach from=$rs_articles item=artcats name="artcat2_foreach"}-->
-				<ul class="rs_art_tabs" style="{if $smarty.foreach.artcat2_foreach.first neq 1} display:none; {/if} ">
-					<!--{foreach from=$artcats.article item=cat_articles name="catarts_foreach"}-->
-						<li class="{if $smarty.foreach.catarts_foreach.last} rs_br_bot_none {/if}"><a href="{$cat_articles.url}" target="_blank">{$cat_articles.title}</a></li>
-					<!--{/foreach}-->
-				</ul>
-			<!--{/foreach}-->
-			</div>
-		</div>
-		
+		<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->		
 	</div>
 	
 	<div class="fr clearfix rs_main_right_index" >
-		<!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem -->
-		
-		<!-- {assign var="rs_index_r_step" value="1"} -->
+    
+	  <!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem -->
+<div class="mod2con clearfix">      
+	  <!-- TemplateBeginEditable name="文章列表" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<style>
+.rs_left_box_list p{
+	color:#000;
+	width:100%;
+	text-align:center;
+	font-size:16px;
+	border-bottom:1px solid #CCC;
+	height:30px;
+	line-height:30px;
+	background:#F2F2F2;
+}
+</style>
+<div class="rs_left_box_list rs_l_art_list">
+	<p><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></p>
+    <ul class="rs_art_tabs">
+        <!--{foreach from=$articles item=article_item}-->
+            <li><a  href="{$article_item.url}" title="{$article_item.title|escape:html}"target="_blank">{$article_item.short_title|truncate:13}</a></li>
+        <!--{/foreach}-->
+    </ul>
+</div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<style>
+.rs_left_box_list p{
+	color:#000;
+	width:100%;
+	text-align:center;
+	font-size:16px;
+	border-bottom:1px solid #CCC;
+	height:30px;
+	line-height:30px;
+	background:#F2F2F2;
+}
+</style>
+<div class="rs_left_box_list rs_l_art_list">
+	<p><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></p>
+    <ul class="rs_art_tabs">
+        <!--{foreach from=$articles item=article_item}-->
+            <li><a  href="{$article_item.url}" title="{$article_item.title|escape:html}"target="_blank">{$article_item.short_title|truncate:13}</a></li>
+        <!--{/foreach}-->
+    </ul>
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
 		<div class="rs_right_box">
 			<div class="rs_right_box_tit">
 				<img class="rs_right_box_tit_logo" src="images/rs_r_tit_1.jpg" />

@@ -176,7 +176,7 @@ padding:0 10px;
 position:absolute; top:0px; right:10px; font-weight:100; font-size:12px;
 }
 .mod2con{
-padding:5px 8px;
+padding:5px 16px;
 }
 .mod2con h1{}
 
@@ -1500,11 +1500,11 @@ _height:1px;
 .rs_main_bg {position: absolute; top:0;left:0; z-index: -2;width: 100%;}
 .rs_main {position: relative;z-index: 1;background: #FFF;}
 
-.rs_index_left {position: relative; top: -368px; left:0;}
+.rs_index_left { top: -368px; left:0;}
 /**************左侧*******************************************************/
 .rs_left_box {width: 240px; margin: 5px 0 0 17px; }
-.rs_left_box_head {border: 1px solid #CCC; border-top: 2px solid #79AC4F; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
-.rs_left_box_list {background: #fff; padding-top: 8px;}
+.rs_left_box_head { border-top: 2px solid #79AC4F; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
+.rs_left_box_list {background: #fff; padding-top: 8px;border: 1px solid #CCC;}
 .rs_l_b_l_border {border: 1px solid #CCC; border-top: none;}
 .rs_cate_tree {width: 255px; border: 1px solid #CCC; background: #fff;}
 .rs_left_box_head_videoad {margin-bottom: 1px;}
@@ -1520,16 +1520,16 @@ _height:1px;
 .rs_l_ht_sort {float: left; width: 26px; height: 28px;}
 .rs_l_ht_imgbox {float: left; width: 85px; height: 85px; border: 1px solid #CCC; margin-left: 10px;}
 .rs_l_ht_imgbox img {width: 85px; height: 85px;}
-.rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
+.rs_l_ht_word {float: left; width: 80px; height:87px; padding-left: 10px;}
 /*********************************************************/
 /***左侧文章***********************************************/
-.rs_l_art_box {width: 238px; margin: 5px 0 0 17px; border: 1px solid #CCC; border-top: none;}
+.rs_l_art_box { clear:both;  width: 898px; margin: 5px 0 0 17px;  border-top: none;}
 .rs_left_art_head { border-top: 2px solid #79AC4F;  background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold;}
 .rs_l_art_t_lt {width: 118px; border-right: 1px solid #CCC;}
 .rs_l_art_t_rt {width: 119px;}
 .rs_l_art_tit {float: left; padding: 0; text-align: center; border-bottom: 1px solid #CCC;}
 .rs_l_art_t_cur {background: #fff; border-bottom: none; height: 36px;}
-.rs_l_art_list {display: table-cell; width: 238px; margin-top: 1px; padding:0;}
+.rs_l_art_list {display: table-cell; width: 450px; margin-top: 1px; padding:0;}
 .rs_l_art_list ul {}
 .rs_l_art_list li {list-style: disc inside ; margin: 0 10px 0 20px; height: 30px; line-height: 30px; border-bottom: 1px dotted #CCC; overflow: hidden;}
 /**********************************************************/
