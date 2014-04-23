@@ -3,7 +3,7 @@
 		<div class="rs_left_box">
 			<div class="rs_left_box_head"><a href="../search.php?intro=hot" target="_blank">热销商品</a></div>
 			<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
-			<!-- {if $smarty.foreach.hot_foreach.index lt 7} 限制显示数量 -->
+			<!-- {if $smarty.foreach.hot_foreach.index lt 8} 限制显示数量 -->
 			<div class="rs_left_box_list {if $smarty.foreach.hot_foreach.index gt 0} rs_br_top {/if}">
 				<div class="rs_left_ht_goodsbox">
 					<div class="rs_l_ht_sort"><img src="images/rs_sort_{$smarty.foreach.hot_foreach.index}.jpg" /></div>

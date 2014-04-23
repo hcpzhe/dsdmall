@@ -1504,7 +1504,19 @@ _height:1px;
 /**************左侧*******************************************************/
 .rs_left_box {width: 240px; margin: 5px 0 0 17px; }
 .rs_left_box_head { border-top: 2px solid #79AC4F; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
-.rs_left_box_list {background: #fff; padding-top: 8px;border: 1px solid #CCC;}
+.rs_left_box_list {background: #fff; padding-top: 8px;}
+.rs_left_box_list p{
+	color:#004123;
+	width:100%;
+	text-align:center;
+	font-size:16px;
+	border-top:2px solid #390;
+	font-weight: bold;
+	height:30px;
+	line-height:30px;
+	background:#F2F2F2;
+	margin-bottom:10px;
+}
 .rs_l_b_l_border {border: 1px solid #CCC; border-top: none;}
 .rs_cate_tree {width: 255px; border: 1px solid #CCC; background: #fff;}
 .rs_left_box_head_videoad {margin-bottom: 1px;}
@@ -1557,6 +1569,9 @@ _height:1px;
 .rs_r_new_word {color: #000; text-align: center;/* position: absolute; bottom:30px;left:35px; width: 110px; height: 18px; overflow: hidden; font-size: 15px; */}
 /*********************************************************/
 /***右侧1楼(cat_goods)************************************/
+.rs_r__gbox {border: 3px solid #A9D828; background: #059B1D;}
+.rs_r__imgbox {border: 3px solid #059B1D;}
+
 .rs_r_1_gbox {border: 3px solid #A9D828; background: #059B1D;}
 .rs_r_1_imgbox {border: 3px solid #059B1D;}
 /*********************************************************/

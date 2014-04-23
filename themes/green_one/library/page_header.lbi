@@ -28,7 +28,7 @@ var select_spe = "{$lang.select_spe}";
 </div>
 <div class="rs_head_wrap">
 	<div class="rs_head">
-		<div class="rs_h_logo"><a href="index.php"><img src="images/logo.gif"></a></div>
+		<div class="rs_h_logo"><a href="index.php"><img src="images/logo.gif" width="160px" height="50px;"></a></div>
 		<div class="rs_h_logoright"><img src="images/rs_h_logoright.jpg"></div>
 		<div class="rs_h_anquan"><img src="images/rs_h_anquan.jpg"></div>
 		<div class="rs_h_bigpic">

@@ -52,13 +52,13 @@
 		<!-- {if $baojian_tel || $shipin_tel || $jiujiu_tel} -->
 		<p class="f13b">客户服务热线</p>
 			<!-- {if $baojian_tel} -->
-			<span class="plr8">吉元保健食品 </span><span class="plr8">{$baojian_tel}</span>
+			<span class="plr8">艾灸保健食品 </span><span class="plr8">{$baojian_tel}</span>
 			<!-- {/if} -->
 			<!-- {if $shipin_tel} -->
-			| <span class="plr8">吉元食品 </span><span class="plr8">{$shipin_tel}</span>
+			| <span class="plr8">艾灸食品 </span><span class="plr8">{$shipin_tel}</span>
 			<!-- {/if} -->
 			<!-- {if $jiujiu_tel} -->
-			| <span class="plr8">九九一化妆品 </span><span class="plr8">{$jiujiu_tel}</span>
+			| <span class="plr8">艾灸治疗 </span><span class="plr8">{$jiujiu_tel}</span>
 			<!-- {/if} -->
 		<!-- {/if} -->
 		<p>{$copyright}</p>

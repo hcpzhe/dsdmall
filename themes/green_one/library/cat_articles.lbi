@@ -1,21 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style>
-.rs_left_box_list p{
-	color:#000;
-	width:100%;
-	text-align:center;
-	font-size:16px;
-	border-bottom:1px solid #CCC;
-	height:30px;
-	line-height:30px;
-	background:#F2F2F2;
-}
-</style>
 <div class="rs_left_box_list rs_l_art_list">
 	<p><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></p>
     <ul class="rs_art_tabs">
         <!--{foreach from=$articles item=article_item}-->
-            <li><a  href="{$article_item.url}" title="{$article_item.title|escape:html}"target="_blank">{$article_item.short_title|truncate:13}</a></li>
+            <li style="list-style:none"><img src="images/header.png" style="float:left">　　<a  href="{$article_item.url}" title="{$article_item.title|escape:html}"target="_blank">{$article_item.short_title|truncate:13}</a></li>
         <!--{/foreach}-->
     </ul>
 </div>
