@@ -37,23 +37,23 @@
  		
 		<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
 		
+        
 		<div class="rs_left_box">
-			
-			<!-- TemplateBeginEditable name="首页视频广告位" -->
+		<!-- TemplateBeginEditable name="首页左侧抢购下方广告位" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
 
 <div class="ads">
 {insert name='ads' id=$ads_id num=$ads_num}
 </div>
  <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-			
+<!-- TemplateEndEditable -->			
 		</div>
 		
 		<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
 		
 		<div class="rs_left_box">
-		<!-- TemplateBeginEditable name="首页左侧抢购下方广告位" -->
+			<!-- TemplateBeginEditable name="首页视频广告位" -->
+<div class="rs_left_box_head rs_left_box_head_videoad">精彩视频</div>            
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
 
 <div class="ads">
