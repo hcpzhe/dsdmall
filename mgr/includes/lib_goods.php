@@ -352,8 +352,9 @@ function handle_gallery_image($goods_id, $image_files, $image_descs, $image_urls
                 $newname    = dirname($img_url) . '/' . $GLOBALS['image']->random_filename() . substr(basename($img_url), $pos);
                 copy('../' . $img_url, '../' . $newname);
                 $img_url    = $newname;
-
+				
                 $GLOBALS['image']->add_watermark('../'.$img_url,'',$GLOBALS['_CFG']['watermark'], $GLOBALS['_CFG']['watermark_place'], $GLOBALS['_CFG']['watermark_alpha']);
+
             }
 
             /* 重新格式化图片名称 */
@@ -1267,7 +1268,7 @@ function check_product_sn_exist($product_sn, $product_id = 0)
  * 格式化商品图片名称（按目录存储）
  *
  */
-function reformat_image_name($type, $goods_id, $source_img, $position='')
+function reformat_image_name($type, $goods_id, $source_img, $position='',$is_move=true)
 {
     $rand_name = gmtime() . sprintf("%03d", mt_rand(1,999));
     $img_ext = substr($source_img, strrpos($source_img, '.'));
@@ -1310,21 +1311,21 @@ function reformat_image_name($type, $goods_id, $source_img, $position='')
     }
     if ($position == 'source')
     {
-        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/source_img/'.$img_name.$img_ext))
+        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/source_img/'.$img_name.$img_ext,$is_move))
         {
             return $dir.'/'.$sub_dir.'/source_img/'.$img_name.$img_ext;
         }
     }
     elseif ($position == 'thumb')
     {
-        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/thumb_img/'.$img_name.$img_ext))
+        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/thumb_img/'.$img_name.$img_ext,$is_move))
         {
             return $dir.'/'.$sub_dir.'/thumb_img/'.$img_name.$img_ext;
         }
     }
     else
     {
-        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/goods_img/'.$img_name.$img_ext))
+        if (move_image_file(ROOT_PATH.$source_img, ROOT_PATH.$dir.'/'.$sub_dir.'/goods_img/'.$img_name.$img_ext,$is_move))
         {
             return $dir.'/'.$sub_dir.'/goods_img/'.$img_name.$img_ext;
         }
@@ -1332,11 +1333,11 @@ function reformat_image_name($type, $goods_id, $source_img, $position='')
     return false;
 }
 
-function move_image_file($source, $dest)
+function move_image_file($source, $dest, $is_move)
 {
     if (@copy($source, $dest))
     {
-        @unlink($source);
+        if ($is_move) @unlink($source);
         return true;
     }
     return false;

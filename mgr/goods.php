@@ -1095,8 +1095,8 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         if (empty($is_url_goods_img))
         {
             $img = reformat_image_name('gallery', $goods_id, $img, 'source');
-            $gallery_img = $image->make_thumb('../'. $img , $GLOBALS['_CFG']['image_width'],  $GLOBALS['_CFG']['image_height']);
-            $gallery_img = reformat_image_name('gallery', $goods_id, $gallery_img, 'goods');
+            //$gallery_img = $image->make_thumb('../'. $img , $GLOBALS['_CFG']['image_width'],  $GLOBALS['_CFG']['image_height']);
+            $gallery_img = reformat_image_name('gallery', $goods_id, $goods_img, 'goods',false);
         }
         else
         {
