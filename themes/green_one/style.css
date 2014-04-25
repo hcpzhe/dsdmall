@@ -1478,8 +1478,8 @@ _height:1px;
 .rs_br_lft {border-left: 1px solid #CCC;}
 /*************************************************************************/
 
-.rs_head_wrap {width: 100%; background: #62C40D; height: 141px;}
-.rs_head {width: 1190px; margin: 0 auto; height: 141px; background: #62C40D;}
+.rs_head_wrap {width: 100%; background: #62C40D; height: 334px; background: url(images/bodybg.jpg);}
+.rs_head {width: 980px; margin: 0 auto; height: 334px; background: url(images/head_bg.jpg);}
 .rs_h_logo {float: left; margin: 50px 0 0 60px;}
 .rs_h_logoright {float: left; margin-top: 50px;}
 .rs_h_anquan {float: left; margin: 84px 0 0 65px;}
