@@ -24,7 +24,7 @@
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="rs_main_banner">
-	<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+<!--首页轮换大图/library/index_ad.lbi-->
 </div>
 <div class="rs_main_wrap blank">
 	<div class="rs_main_bg">
