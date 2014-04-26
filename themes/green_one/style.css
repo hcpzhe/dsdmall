@@ -1478,20 +1478,20 @@ _height:1px;
 .rs_br_lft {border-left: 1px solid #CCC;}
 /*************************************************************************/
 
-.rs_head_wrap {width: 100%; background: #ECF3E7; height: 334px;  /*background: url(images/bodybg.jpg);*/}
-.rs_head {width: 980px; margin: 0 auto; height: 334px; background: url(images/head_bg.jpg);}
+.rs_head_wrap {width: 100%; background: #ECF3E7; height: 334px;  background: url(images/ww1.jpg);}
+.rs_head {width: 980px; margin: 0 auto; height: 335px; background: url(images/head_bg.jpg);}
 .rs_h_logo {float: left; margin: 50px 0 0 60px;}
 .rs_h_logoright {float: left; margin-top: 50px;}
 .rs_h_anquan {float: left; margin: 84px 0 0 65px;}
 .rs_h_bigpic {float: left; position: relative;}
 .rs_h_bigpic_bot {position: absolute; top: 124px; left: -13px;}
 
-.rs_headnav_wrap {width: 100%; background: #333333; height: 40px; margin-bottom: 1px;}
-.rs_headnav {width: 1190px; margin: 0 auto; height: 40px; background: #333333;}
+.rs_headnav_wrap {width: 100%; background: #860E0E; height: 40px; margin-bottom: 1px;}
+.rs_headnav {width: 1190px; margin: 0 auto; height: 40px; background: #860E0E;}
 .rs_navlist {padding-left: 130px;}
 .rs_navlist li {float: left; /* margin-right: 1px; */}
 .rs_navlist a {float: left; height: 40px; width: 100px; text-align: center; line-height: 40px; color: #FFF; font-size: 14px; font-weight: bold;}
-.rs_navlist a:hover {background: #62C40D;}
+.rs_navlist a:hover {background: #fff; color:#860E0E; border:1px solid #860E0E;height:38px; line-height:38px; }
 /* .rs_navlist li.rs_curt {background: #62C40D;} */
 
 .rs_main_wrap {width: 100%; position: relative; }
