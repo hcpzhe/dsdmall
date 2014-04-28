@@ -1,4 +1,4 @@
-imgUrl1="data/afficheimg/20140426xqqakm.jpg";
+imgUrl1="data/afficheimg/20140428lugncb.jpg";
 imgtext1="";
 imgLink1=escape("http://");
 imgUrl2="data/afficheimg/20140426ldwlqd.jpg";
