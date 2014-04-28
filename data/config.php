@@ -1,17 +1,17 @@
 <?php
 // database host
-$db_host   = "localhost:3306";
+$db_host   = "192.168.1.9:3306";
 
 // database name
 $db_name   = "dsdmall.com";
 //$db_name   = "dsdmall_com";
 
 // database username
-$db_user   = "root";
+$db_user   = "wqseo";
 //$db_user   = "dsdmall_com";
 
 // database password
-$db_pass   = "root";
+$db_pass   = "wqseo";
 //$db_pass   = "MWNwYmN1QTNmJmY";
 
 // table prefix

@@ -132,7 +132,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('auction_list',    index_get_auction());        // 拍卖活动
     $smarty->assign('shop_notice',     $_CFG['shop_notice']);       // 商店公告
     /**RockSotre******************************************************************************************/
-    $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   // 
+    $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //
 	/****************************************************************************************************/
     /* 首页主广告设置 */
     $smarty->assign('index_ad',     $_CFG['index_ad']);
@@ -163,7 +163,7 @@ $smarty->assign('flash_count',count(get_flash_xml()));
 
     /* 页面中的动态内容 */
     assign_dynamic('index');
-    
+
 	require(dirname(__FILE__) . '/rand_sold_list.php');
 }
 
@@ -353,7 +353,7 @@ function get_flash_xml()
             {
                 $val[4] = isset($val[4]) ? $val[4] : 0;
                 $flashdb[] = array('src'=>$val[1],'url'=>$val[2],'text'=>$val[3],'sort'=>$val[4]);
-				
+
 				//print_r($flashdb);
             }
         }
