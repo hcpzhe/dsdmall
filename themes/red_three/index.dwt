@@ -107,6 +107,10 @@
 		</div>
 	</div>
  <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 	<div id="rs_jq_bnr" class="rs_bnr_box">
 		<div class="rs_bnr_boxtit">
