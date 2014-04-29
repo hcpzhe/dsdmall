@@ -923,25 +923,27 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
    */
    
 #category_tree dd {
-	padding: 0 10px;
+	padding: 10px 0px 0px 30px;
 	line-height: 24px;
 	position: absolute;
 	left: 216px;
 	top: 0;
 	width: 600px;
 	background: #fff;
-	border:2px solid #B20000;
+	border:2px solid #cc0001;
 }
 #category_tree dd .over_3 {
 	color: #333;
 	text-decoration: none;
 	padding-right: 10px;
+	padding-left: 10px;
 	float: left;
-	width: 90px;
+	
 }
 #category_tree dd .clearfix {
 	border-bottom: 1px solid #e5e5e5;
 	line-height: 30px;
+	width:440px;
 }
 #category_tree dd .over_3:hover {
 	color: #E60012;
@@ -953,8 +955,8 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	color: #B20000;
 	font-weight: bold;
 	float: left;
-	height: 50px;
-	width:100px;
+	height:35px;
+	width:80px;
 }
 /*里页分类树*/	
 	
