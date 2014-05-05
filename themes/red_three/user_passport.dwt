@@ -97,8 +97,8 @@
           </td>
         </tr>
 <!--邮箱-->
-        <tr>
-          <td align="right">{$lang.label_password}</td>
+
+        <tr>          <td align="right">{$lang.label_password}</td>
           <td>
           <input name="password" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" class="inputBg" style="width:179px;" />
             <span style="color:#FF0000" id="password_notice"> *</span>

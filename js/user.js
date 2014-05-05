@@ -463,17 +463,7 @@ function register()
     //msg += username_shorter + '\n';
   }
 
-  if (email.length == 0)
-  {
-    msg += email_empty + '\n';
-  }
-  else
-  {
-    if ( ! (Utils.isEmail(email)))
-    {
-      msg += email_invalid + '\n';
-    }
-  }
+
   if (password.length == 0)
   {
     msg += password_empty + '\n';
