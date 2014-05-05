@@ -64,9 +64,7 @@
     <div class="blank"></div>
   </div>
   
-  <div class="usTxt">
-  <!-- #BeginLibraryItem "/library/goto_ecmoban.lbi" --><!-- #EndLibraryItem -->
-   </div>
+<!--登录页面广告-->
 </div>
 <!--{/if}-->
 <!--#登录界面 end-->
@@ -98,13 +96,7 @@
             <span id="username_notice" style="color:#FF0000"> *</span>
           </td>
         </tr>
-        <tr>
-          <td align="right">{$lang.label_email}</td>
-          <td>
-          <input name="email" type="text" size="25" id="email" onblur="checkEmail(this.value);"  class="inputBg"/>
-            <span id="email_notice" style="color:#FF0000"> *</span>
-          </td>
-        </tr>
+<!--邮箱-->
         <tr>
           <td align="right">{$lang.label_password}</td>
           <td>
@@ -190,9 +182,7 @@
     </form>
   <div class="blank"></div>
   </div>
-  <div class="usTxt">
-   <!-- #BeginLibraryItem "/library/goto_ecmoban.lbi" --><!-- #EndLibraryItem -->
-   </div>
+<!--注册页面广告-->
 </div>
 <!--{/if}-->
 <!--{/if}-->
