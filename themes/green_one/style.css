@@ -1590,7 +1590,7 @@ _height:1px;
 /*************************************************************************/
 
 /**************底部*******************************************************/
-.rs_foot_wrap {width: 100%; height: 621px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat center; position: relative; z-index: 1; }
+.rs_foot_wrap {width: 100%; height: 500px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat center; position: relative; z-index: 1; }
 .rs_links_wrap {margin-top: 24px; background: #fff; height: 65px; padding: 4px 0;}
 .rs_links { margin: 0 4px; background: #fff; height:63px; border: 1px solid #e5e5e5; color: #333; overflow: hidden}
 .rs_links a {color: #333;}

@@ -21,9 +21,7 @@
 			<!-- {/if} -->
 		</div>
 	</div>
-	<div class="rs_foot_banner">
-		<img src="images/rs_foot_banner.jpg" />
-	</div>
+
 	<div class="rs_foot_helps_wrap">
 	<!--{if $helps}-->
 		<div class="rs_foot_helps">

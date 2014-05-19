@@ -48,9 +48,8 @@
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->			
 		</div>
-		
-		<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
-		
+
+	
 		<div class="rs_left_box">
 			<!-- TemplateBeginEditable name="首页视频广告位" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
@@ -62,6 +61,19 @@
 <!-- TemplateEndEditable -->
 		</div>
 		
+        
+<div class="rs_left_box">
+<!-- TemplateBeginEditable name="二维码广告位" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>        
+        
+        
 		<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->		
 	</div>
 	
@@ -290,15 +302,9 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 -->
 </script>
 <div class="block blank">
-	<!-- TemplateBeginEditable name="首页友情链接上方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+<!-- #BeginLibraryItem "/library/ad_position_1.lbi" --><!-- #EndLibraryItem -->
+</div>
 
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-</div>
 
 <div class="blank"></div>
 
