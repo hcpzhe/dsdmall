@@ -30,7 +30,7 @@
 <div class="block clearfix rs_bgf">
   <div id="pageLeft" class="fl">
 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
+<!--限时抢购-->
 <!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->
 
 	 <!-- TemplateBeginEditable name="左边区域" -->
@@ -351,12 +351,7 @@ document.getElementById('history_list').innerHTML = '{$lang.no_history}';
 </div>
 <div class="block pb8 rs_bgf rs_ptR">
 	<!-- TemplateBeginEditable name="友情链接上方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" --><!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

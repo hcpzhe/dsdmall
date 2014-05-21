@@ -1541,7 +1541,7 @@ _height:1px;
 .rs_l_art_t_rt {width: 119px;}
 .rs_l_art_tit {float: left; padding: 0; text-align: center; border-bottom: 1px solid #CCC;}
 .rs_l_art_t_cur {background: #fff; border-bottom: none; height: 36px;}
-.rs_l_art_list {display: table-cell; width: 450px; margin-top: 1px; padding:0;}
+.rs_l_art_list {display: table-cell; width: 450px; margin-top: 1px; padding:0; float:left;}
 .rs_l_art_list ul {}
 .rs_l_art_list li {list-style: disc inside ; margin: 0 10px 0 20px; height: 30px; line-height: 30px; border-bottom: 1px dotted #CCC; overflow: hidden;}
 /**********************************************************/

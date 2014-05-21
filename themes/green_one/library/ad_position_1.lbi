@@ -25,14 +25,10 @@ float: left;
 <div id="demo">
 <div id="indemo">
 <div id="demo1">
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
-<a href="#"><img src="images/111.png" border="0" width="200px" height="100px"/></a>
+<a href="#"><img src="images/ls1.jpg" border="0" width="200px" height="130px"/></a>
+<a href="#"><img src="images/ls2.jpg" border="0" width="200px" height="130px"/></a>
+<a href="#"><img src="images/ls5.jpg" border="0" width="200px" height="130px"/></a>
+<a href="#"><img src="images/ls4.jpg" border="0" width="200px" height="130px"/></a>
 </div>
 <div id="demo2"></div>
 </div>
