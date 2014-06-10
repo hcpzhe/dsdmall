@@ -300,7 +300,7 @@ function reg(str){
                         <!-- {foreach from=$spec.values item=value key=key} -->
                         <label for="spec_value_{$value.id}">
                         <input type="radio" name="spec_{$spec_key}" value="{$value.id}" id="spec_value_{$value.id}" {if $key eq 0}checked{/if} onclick="changePrice()" />
-                        {$value.label} [{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}] </label>
+                        {$value.label}</label>
                         <!-- {/foreach} -->
                         <input type="hidden" name="spec_list" value="{$key}" />
                         <!-- {else} -->
