@@ -323,6 +323,20 @@ function reg(str){
       <!-- {/foreach} -->
       <!-- {* 结束循环可选属性 *} -->
       
+      	 <li>
+            <a class="def">
+                {$goods.goods_style_name}
+            </a>
+        </li>
+        <!--{foreach from=$related_goods item=releated_goods_data}-->
+        <li class="relation">
+            <a href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}">
+                {$releated_goods_data.short_name}
+            </a>
+        </li>
+		<!--{/foreach}-->
+
+        
            <li class="clearfix">
        <dd>
        <strong>{$lang.number}：</strong>
