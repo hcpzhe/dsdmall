@@ -325,16 +325,27 @@ function reg(str){
       
       	 <li>
             <a class="def">
-                {$goods.goods_style_name}
+                <!-- {if $goods.link_name} -->
+                	{$goods.link_name}
+                <!-- {else} -->
+                	{$goods.goods_style_name}
+                <!-- {/if} -->
             </a>
         </li>
+        <!-- {if $related_goods} -->
         <!--{foreach from=$related_goods item=releated_goods_data}-->
         <li class="relation">
             <a href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}">
-                {$releated_goods_data.short_name}
+                <!-- {if $releated_goods_data.link_name} -->
+                	{$releated_goods_data.link_name}
+                <!-- {else} -->
+                	{$releated_goods_data.goods_name}
+                <!-- {/if} -->
+                
             </a>
         </li>
 		<!--{/foreach}-->
+        <!-- {/if} -->
 
         
            <li class="clearfix">

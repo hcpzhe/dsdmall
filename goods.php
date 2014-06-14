@@ -150,7 +150,7 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
     $smarty->assign('promotion',       get_promotion_info($goods_id));//促销信息
     $smarty->assign('promotion_info', get_promotion_info());
 	$smarty->assign('hot_goods',       get_recommend_goods('hot'));
-    
+
     /* 获得商品的信息 */
     $goods = get_goods_info($goods_id);
     if ($goods === false)
@@ -293,7 +293,7 @@ $smarty->display('goods.dwt',      $cache_id);
  */
 function get_linked_goods($goods_id)
 {
-    $sql = 'SELECT g.goods_id, g.goods_name, g.goods_thumb, g.goods_img, g.shop_price AS org_price, ' .
+    $sql = 'SELECT g.goods_id,g.link_name, g.goods_name, g.goods_thumb, g.goods_img, g.shop_price AS org_price, ' .
                 "IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS shop_price, ".
                 'g.market_price, g.promote_price, g.promote_start_date, g.promote_end_date ' .
             'FROM ' . $GLOBALS['ecs']->table('link_goods') . ' lg ' .
@@ -309,6 +309,7 @@ function get_linked_goods($goods_id)
     {
         $arr[$row['goods_id']]['goods_id']     = $row['goods_id'];
         $arr[$row['goods_id']]['goods_name']   = $row['goods_name'];
+        $arr[$row['goods_id']]['link_name']   = $row['link_name'];
         $arr[$row['goods_id']]['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
             sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
         $arr[$row['goods_id']]['goods_thumb']  = get_image_path($row['goods_id'], $row['goods_thumb'], true);
